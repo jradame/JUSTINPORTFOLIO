@@ -1,11 +1,10 @@
-
-
 import React from 'react';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faCalendarAlt, faExternalLinkAlt } from '@fortawesome/free-solid-svg-icons';
+import { faExternalLinkAlt } from '@fortawesome/free-solid-svg-icons';
 import { faGithub } from '@fortawesome/free-brands-svg-icons';
 import Skeleton from 'react-loading-skeleton';
 import ScrollReveal from './ScrollReveal'; // Assuming this is a local component
+
 
 const Projects = ({ loading }) => {
   // Project data array.
@@ -42,6 +41,7 @@ const Projects = ({ loading }) => {
     }
   ];
 
+
   return (
     <section id="projects" className="projects">
       <div className="projects__container">
@@ -50,6 +50,7 @@ const Projects = ({ loading }) => {
             Here are a few of my <span className="blue">projects</span>
           </h1>
         </ScrollReveal>
+
 
         {loading ? (
           <div className="projects__cards">
@@ -131,11 +132,5 @@ const Projects = ({ loading }) => {
   );
 };
 
+
 export default Projects;
-
-
-
-
-
-
-
