@@ -266,11 +266,12 @@ html {
   color: var(--text-secondary);
   font-size: 1.5rem;
   font-weight: 400;
-  line-height: 1.6;
+  line-height: 1.6; /* Improves readability */
   margin-bottom: 2rem;
-  max-width: 700px;
-  text-align: center;
+  max-width: 700px; /* Constrains the width */
+  text-align: center; /* Ensures text inside is centered */
 }
+
 
 .hero-buttons {
   display: flex;
@@ -598,7 +599,7 @@ html {
   transform: scale(0.9);
   transition: all 0.4s ease;
   width: 85%;
-  align-items: flex-end;
+  align-items: flex-end; /* Align children bottoms for BOTH modals */
   justify-content: space-between;
 }
 .modal.open {
@@ -692,7 +693,7 @@ html {
   display: flex;
   flex-direction: column;
   height: 100%;
-  justify-content: space-between;
+  justify-content: space-between; /* Keeps top text and bottom icons spaced */
   text-align: center;
 }
 .modal__languages {
@@ -700,7 +701,7 @@ html {
   flex-wrap: wrap;
   gap: 0.8rem;
   justify-content: center;
-  margin-top: auto;
+  margin-top: auto; /* Push icons to bottom in ABOUT modal */
 }
 .tech-icon {
   align-items: center;
@@ -798,7 +799,7 @@ html {
   flex-wrap: wrap;
   gap: 1rem;
   justify-content: center;
-  margin-top: auto;
+  margin-top: auto; /* Align icons bottom same as contact modal */
 }
 .code-icon svg {
   color: #38bdf8;
@@ -974,6 +975,8 @@ body:not(.dark-theme) .modal__right .modal__sub-title--contact {
 body:not(.dark-theme) .modal__right .form__submit {
   color: white !important;
 }
+
+
 
 /* =================================================================== */
 /* 6. FOOTER
@@ -1299,154 +1302,6 @@ body:not(.dark-theme) .modal__right .form__submit {
   }
 }
 
-/* =================================================================== */
-/* MOBILE MODAL FIXES
-/* =================================================================== */
-
-@media (max-width: 768px) {
-  /* Prevent body scroll when modal is open */
-  body.modal-open {
-    overflow: hidden;
-  }
-
-  /* Modal overlay adjustments */
-  .modal-overlay {
-    padding: 0.5rem !important;
-    align-items: flex-start !important;
-    overflow-y: auto !important;
-  }
-
-  /* Modal container - stack vertically */
-  .modal {
-    flex-direction: column !important;
-    width: 95% !important;
-    max-height: none !important;
-    min-height: auto !important;
-    height: auto !important;
-    margin: 1rem auto !important;
-  }
-
-  /* Modal halves - full width, no fixed height */
-  .modal__half {
-    width: 100% !important;
-    padding: 1.5rem !important;
-    overflow-y: visible !important;
-    max-height: none !important;
-    height: auto !important;
-  }
-
-  /* Reset transforms for mobile */
-  .modal__left {
-    border-radius: 20px 20px 0 0 !important;
-    transform: translateY(-100%) !important;
-  }
-
-  .modal__right {
-    border-radius: 0 0 20px 20px !important;
-    transform: translateY(100%) !important;
-  }
-
-  .modal__left.slide-in,
-  .modal__right.slide-in {
-    transform: translateY(0) !important;
-  }
-
-  /* Close button adjustments */
-  .modal__exit {
-    top: 0.5rem !important;
-    right: 0.5rem !important;
-    font-size: 1.25rem !important;
-    z-index: 10002 !important;
-  }
-
-  /* Typography scaling */
-  .modal__title--about,
-  .modal__title--contact-info,
-  .modal__title--contact {
-    font-size: 1.5rem !important;
-    margin-bottom: 0.75rem !important;
-  }
-
-  .modal__sub-title--about,
-  .modal__sub-title--contact-info,
-  .modal__sub-title--contact {
-    font-size: 1rem !important;
-    margin-bottom: 1rem !important;
-  }
-
-  .modal__para {
-    font-size: 0.9rem !important;
-    margin-bottom: 0.75rem !important;
-  }
-
-  .services-title {
-    font-size: 1.1rem !important;
-  }
-
-  /* Tech icons and services - center and wrap */
-  .modal__languages,
-  .modal__services {
-    display: flex !important;
-    flex-wrap: wrap !important;
-    gap: 0.5rem !important;
-    justify-content: center !important;
-  }
-
-  .tech-icon {
-    font-size: 0.9rem !important;
-    height: 55px !important;
-    width: 55px !important;
-  }
-
-  /* Contact info footer positioning fix */
-  .contact-info__footer {
-    position: static !important;
-    bottom: auto !important;
-    margin-top: 2rem !important;
-  }
-
-  /* Form adjustments */
-  .form__item {
-    margin-bottom: 1rem !important;
-  }
-
-  .input {
-    font-size: 0.9rem !important;
-    padding: 0.75rem !important;
-  }
-
-  textarea.input {
-    min-height: 80px !important;
-  }
-
-  .form__submit {
-    font-size: 0.9rem !important;
-    padding: 0.75rem 1.5rem !important;
-  }
-
-  /* About content adjustments */
-  .about-content--balanced {
-    justify-content: flex-start !important;
-    gap: 1.5rem !important;
-  }
-
-  .about-content__footer {
-    margin-top: 1.5rem !important;
-  }
-
-  /* Contact info content adjustments */
-  .contact-info-content {
-    justify-content: flex-start !important;
-    gap: 1.5rem !important;
-  }
-
-  .contact-form-content {
-    justify-content: flex-start !important;
-    gap: 1.5rem !important;
-  }
-}
-
-/* Extra small screens */
 @media (max-width: 480px) {
   .hero-headshot {
     height: 150px;
@@ -1477,26 +1332,6 @@ body:not(.dark-theme) .modal__right .form__submit {
     height: 36px;
     width: 36px;
   }
-
-  /* Mobile modal extra small adjustments */
-  .modal {
-    width: 98% !important;
-  }
-
-  .modal__half {
-    padding: 1.25rem !important;
-  }
-
-  .modal__title--about,
-  .modal__title--contact-info,
-  .modal__title--contact {
-    font-size: 1.3rem !important;
-  }
-
-  .tech-icon {
-    height: 50px !important;
-    width: 50px !important;
-  }
 }
 
 /* =================================================================== */
@@ -1521,3 +1356,13 @@ body:not(.dark-theme) .modal__right .form__submit {
   background: var(--border-color);
   border-radius: 4px;
 }
+
+
+
+
+
+
+
+
+
+

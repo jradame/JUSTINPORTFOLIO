@@ -13,19 +13,15 @@ const Modal = ({ isOpen, onClose, modalType }) => {
 
 
   /* MODAL VISIBILITY */
-useEffect(() => {
-  if (isOpen) {
-    setShouldRender(true);
-    setTimeout(() => setIsVisible(true), 50);
-    document.body.classList.add('modal-open');
-  } else {
-    setIsVisible(false);
-    setTimeout(() => {
-      setShouldRender(false);
-      document.body.classList.remove('modal-open');
-    }, 600);
-  }
-}, [isOpen]);
+  useEffect(() => {
+    if (isOpen) {
+      setShouldRender(true);
+      setTimeout(() => setIsVisible(true), 50);
+    } else {
+      setIsVisible(false);
+      setTimeout(() => setShouldRender(false), 600);
+    }
+  }, [isOpen]);
 
 
   /* FORM HANDLERS */
