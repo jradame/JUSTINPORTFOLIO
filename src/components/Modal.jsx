@@ -74,7 +74,7 @@ const Modal = ({ isOpen, onClose, modalType }) => {
         background: 'rgba(0,0,0,0.7)',
         display: 'flex',
         justifyContent: 'center',
-        alignItems: isMobile ? 'flex-start' : 'center',
+        alignItems: 'center',
         zIndex: 9999,
         opacity: isVisible ? 1 : 0,
         transition: 'opacity 0.4s ease-in-out',
@@ -93,16 +93,16 @@ const Modal = ({ isOpen, onClose, modalType }) => {
           justifyContent: 'space-between',
           width: isMobile ? '95%' : '90%',
           maxWidth: isMobile ? '95%' : '1000px',
-          maxHeight: isMobile ? 'none' : 'auto',
+          maxHeight: isMobile ? '85vh' : 'auto',
           minHeight: isMobile ? 'auto' : '500px',
           height: isMobile ? 'auto' : '650px',
-          overflow: 'hidden',
+          overflow: isMobile ? 'auto' : 'hidden',
           position: 'relative',
           boxShadow: '0 15px 35px rgba(0,0,0,0.5)',
           transform: isVisible ? 'translateY(0)' : 'translateY(80px)',
           opacity: isVisible ? 1 : 0,
           transition: 'all 0.5s cubic-bezier(0.22, 1, 0.36, 1)',
-          margin: isMobile ? '1rem auto' : 'auto'
+          margin: 'auto'
         }}
       >
         <button
@@ -159,20 +159,20 @@ const Modal = ({ isOpen, onClose, modalType }) => {
                   </p>
                 </div>
                 <div className="about-content__footer" style={{ marginTop: isMobile ? '1.5rem' : 'auto' }}>
-                  <div className="modal__languages" style={{ gap: isMobile ? '0.5rem' : '0.8rem' }}>
-                    <div className="tech-icon html-icon" style={{ height: isMobile ? '55px' : '60px', width: isMobile ? '55px' : '60px' }}>
+                  <div className="modal__languages" style={{ gap: isMobile ? '0.4rem' : '0.8rem' }}>
+                    <div className="tech-icon html-icon" style={{ height: isMobile ? '48px' : '60px', width: isMobile ? '48px' : '60px' }}>
                       <FontAwesomeIcon icon={faHtml5} /><span className="tech-name">HTML5</span>
                     </div>
-                    <div className="tech-icon css-icon" style={{ height: isMobile ? '55px' : '60px', width: isMobile ? '55px' : '60px' }}>
+                    <div className="tech-icon css-icon" style={{ height: isMobile ? '48px' : '60px', width: isMobile ? '48px' : '60px' }}>
                       <FontAwesomeIcon icon={faCss3Alt} /><span className="tech-name">CSS3</span>
                     </div>
-                    <div className="tech-icon js-icon" style={{ height: isMobile ? '55px' : '60px', width: isMobile ? '55px' : '60px' }}>
+                    <div className="tech-icon js-icon" style={{ height: isMobile ? '48px' : '60px', width: isMobile ? '48px' : '60px' }}>
                       <FontAwesomeIcon icon={faJs} /><span className="tech-name">JavaScript</span>
                     </div>
-                    <div className="tech-icon react-icon" style={{ height: isMobile ? '55px' : '60px', width: isMobile ? '55px' : '60px' }}>
+                    <div className="tech-icon react-icon" style={{ height: isMobile ? '48px' : '60px', width: isMobile ? '48px' : '60px' }}>
                       <FontAwesomeIcon icon={faReact} /><span className="tech-name">React</span>
                     </div>
-                    <div className="tech-icon figma-icon" style={{ height: isMobile ? '55px' : '60px', width: isMobile ? '55px' : '60px' }}>
+                    <div className="tech-icon figma-icon" style={{ height: isMobile ? '48px' : '60px', width: isMobile ? '48px' : '60px' }}>
                       <FontAwesomeIcon icon={faFigma} /><span className="tech-name">Figma</span>
                     </div>
                   </div>
@@ -208,16 +208,16 @@ const Modal = ({ isOpen, onClose, modalType }) => {
                   <h3 className="services-title" style={{ fontSize: isMobile ? '1.1rem' : '1.25rem' }}>
                     My Services
                   </h3>
-                  <div className="modal__services" style={{ gap: isMobile ? '0.5rem' : '1rem' }}>
-                    <div className="tech-icon code-icon" style={{ height: isMobile ? '55px' : '60px', width: isMobile ? '55px' : '60px' }}>
+                  <div className="modal__services" style={{ gap: isMobile ? '0.4rem' : '1rem' }}>
+                    <div className="tech-icon code-icon" style={{ height: isMobile ? '48px' : '60px', width: isMobile ? '48px' : '60px' }}>
                       <FontAwesomeIcon icon={faCode} />
                       <span className="tech-name">Web Dev</span>
                     </div>
-                    <div className="tech-icon design-icon" style={{ height: isMobile ? '55px' : '60px', width: isMobile ? '55px' : '60px' }}>
+                    <div className="tech-icon design-icon" style={{ height: isMobile ? '48px' : '60px', width: isMobile ? '48px' : '60px' }}>
                       <FontAwesomeIcon icon={faPalette} />
                       <span className="tech-name">UI/UX</span>
                     </div>
-                    <div className="tech-icon responsive-icon" style={{ height: isMobile ? '55px' : '60px', width: isMobile ? '55px' : '60px' }}>
+                    <div className="tech-icon responsive-icon" style={{ height: isMobile ? '48px' : '60px', width: isMobile ? '48px' : '60px' }}>
                       <FontAwesomeIcon icon={faMobileAlt} />
                       <span className="tech-name">Responsive</span>
                     </div>
