@@ -27,7 +27,8 @@ A personal portfolio site built from scratch with React. This project showcases 
 
 - **React** (component-based architecture)  
 - **CSS3** (custom styles and animations)  
-- **JavaScript (ES6+)**  
+- **JavaScript (ES6+)**
+- **Tailwind**
 - **EmailJS** (contact form integration)  
 - **Vercel** (deployment and hosting)  
 
