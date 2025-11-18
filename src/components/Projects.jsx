@@ -23,7 +23,7 @@ const Projects = ({ loading }) => {
       title: 'Library Project 📚',
       description: 'A responsive React web app that simulates an online bookstore. Users can browse, filter, sort by price or rating, and see which books are on sale.',
       imageUrl: '/images/library-screenshot.png',
-      liveUrl: 'https://libraryproject.vercel.app',
+      liveUrl: 'https://libraryproject-beryl.vercel.app',
       githubUrl: 'https://github.com/jradame/LIBRARYPROJECT',
       technologies: ['React', 'CSS3', 'JavaScript', 'Vercel'],
       category: 'Frontend',
