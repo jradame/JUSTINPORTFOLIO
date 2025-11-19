@@ -3,12 +3,27 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faExternalLinkAlt } from '@fortawesome/free-solid-svg-icons';
 import { faGithub } from '@fortawesome/free-brands-svg-icons';
 import Skeleton from 'react-loading-skeleton';
-import ScrollReveal from './ScrollReveal'; // Assuming this is a local component
-
+import ScrollReveal from './ScrollReveal';
 
 const Projects = ({ loading }) => {
-  // Project data array.
+  // Project data array
   const projects = [
+    // ⭐ FEATURED: Your Client Project (Add this FIRST)
+    {
+      title: 'SkinStric Skin Care Platform 🏥',
+      description: 'Professional dermatology and skincare web application built for SkinStric. Solo-developed frontend featuring a patient portal, image upload/processing for skin analysis, API integrations, and responsive design. Completed in 2 months with modern React architecture.',
+      imageUrl: '/images/skinstric-preview.png',
+      liveUrl: 'https://skinstricapp-fresh.vercel.app/',
+      githubUrl: 'https://github.com/jradame/skinstric-project', // Update with your actual repo
+      technologies: ['React', 'Tailwind CSS', 'REST APIs', 'Image Processing', 'Vercel'],
+      category: 'Frontend',
+      status: 'LIVE',
+      featured: true,
+      clientWork: true,
+      timeline: '2-month project • Completed Oct 2025'
+    },
+    
+    // Your existing 3 projects
     {
       title: 'CineScope 🎬',
       description: 'Search movies, TV shows, and games using the OMDb API. Features modals, skeleton loaders, and smooth UI interactions.',
@@ -41,7 +56,6 @@ const Projects = ({ loading }) => {
     }
   ];
 
-
   return (
     <section id="projects" className="projects">
       <div className="projects__container">
@@ -51,10 +65,9 @@ const Projects = ({ loading }) => {
           </h1>
         </ScrollReveal>
 
-
         {loading ? (
           <div className="projects__cards">
-            {[...Array(3)].map((_, index) => (
+            {[...Array(4)].map((_, index) => (
               <div key={index} className="project-block project-block--loading">
                 <div className="project-image-container">
                   <Skeleton height="100%" />
@@ -79,7 +92,14 @@ const Projects = ({ loading }) => {
           <div className="projects__cards">
             {projects.map((project, index) => (
               <ScrollReveal key={project.title} direction="up" delay={200 + index * 100}>
-                <div className="project-block">
+                <div className={`project-block ${project.featured ? 'project-block--featured' : ''}`}>
+                  {/* Featured Badge */}
+                  {project.featured && (
+                    <div className="project-badge-featured">
+                      ⭐ Client Project
+                    </div>
+                  )}
+                  
                   <div className="project-image-container">
                     <img
                       src={project.imageUrl}
@@ -87,9 +107,18 @@ const Projects = ({ loading }) => {
                       className="project-image-simple"
                     />
                   </div>
+                  
                   <div className="project-simple-info">
                     <h3 className="project-simple-title">{project.title}</h3>
                     <p className="project-simple-desc">{project.description}</p>
+                    
+                    {/* Timeline for featured projects */}
+                    {project.timeline && (
+                      <p className="project-timeline">
+                        <small>{project.timeline}</small>
+                      </p>
+                    )}
+                    
                     <div className="project-simple-links">
                       {project.liveUrl && (
                         <a
@@ -114,6 +143,7 @@ const Projects = ({ loading }) => {
                         </a>
                       )}
                     </div>
+                    
                     <div className="project-simple-tags">
                       {project.technologies.map((tech, i) => (
                         <span key={i} className="project-simple-tag">
@@ -131,6 +161,5 @@ const Projects = ({ loading }) => {
     </section>
   );
 };
-
 
 export default Projects;
