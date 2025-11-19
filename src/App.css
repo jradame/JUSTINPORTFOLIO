@@ -414,7 +414,9 @@ html {
   align-items: stretch;
   display: grid;
   gap: 2rem;
-  grid-template-columns: repeat(auto-fit, minmax(340px, 1fr));
+  grid-template-columns: repeat(2, 1fr);
+  max-width: 900px;
+  margin: 0 auto;
 }
 
 .project-block {
@@ -426,7 +428,7 @@ html {
   flex: 1;
   flex-direction: column;
   margin-bottom: 2rem;
-  max-width: 370px;
+  max-width: 100%;
   min-width: 320px;
   outline: none !important;
   padding: 0 !important;
@@ -1322,8 +1324,8 @@ body:not(.dark-theme) .modal__right .form__submit {
     padding: 80px 1rem 60px;
   }
   .projects__cards {
-    align-items: center;
-    flex-direction: column;
+    grid-template-columns: 1fr;
+    max-width: 100%;
   }
   .project-block {
     max-width: 100%;

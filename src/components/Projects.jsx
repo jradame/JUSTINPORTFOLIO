@@ -11,7 +11,7 @@ const Projects = ({ loading }) => {
     // ⭐ FEATURED: Your Client Project (Add this FIRST)
     {
       title: 'SkinStric Skin Care Platform 🏥',
-      description: 'Professional dermatology and skincare web application built for SkinStric. Solo-developed frontend featuring a patient portal, image upload/processing for skin analysis, API integrations, and responsive design. Completed in 2 months with modern React architecture.',
+      description: 'Professional dermatology web application built for SkinStric. Features patient portal, image upload/processing for skin analysis, and API integrations with responsive design.',
       imageUrl: '/images/skinstric-preview.png',
       liveUrl: 'https://skinstricapp-fresh.vercel.app/',
       githubUrl: 'https://github.com/jradame/skinstric-project', // Update with your actual repo
