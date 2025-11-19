@@ -144,7 +144,7 @@ const Footer = ({ loading, toggleModal }) => {
           <p>
             © {currentYear} Justin Adame. Made with{' '}
             <FontAwesomeIcon icon={faHeart} className="footer__heart" />{' '}
-            using React & CSS
+          
           </p>
         </div>
       </div>
