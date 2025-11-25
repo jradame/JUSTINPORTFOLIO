@@ -1426,3 +1426,61 @@ body:not(.dark-theme) .modal__right .form__submit {
   background: var(--border-color);
   border-radius: 4px;
 }
+
+/* UX-specific styling for cards */
+.project-block--ux {
+  border: 2px solid #10b981; /* Green border for UX projects */
+}
+
+.project-badge-ux {
+  background: linear-gradient(135deg, #10b981 0%, #059669 100%);
+}
+
+.project-simple-btn--ux {
+  background: #10b981;
+  color: white;
+}
+
+.project-simple-btn--ux:hover {
+  background: #059669;
+  transform: translateY(-2px);
+}
+
+.project-simple-tag--ux {
+  background: rgba(16, 185, 129, 0.1);
+  color: #059669;
+  border: 1px solid rgba(16, 185, 129, 0.3);
+}
+
+/* Section Headers */
+.projects__section-title {
+  margin-top: 3.5rem;
+  margin-bottom: 2rem;
+  font-size: 2rem;
+  font-weight: 700;
+  color: #1a202c;
+  padding-left: 8px;
+  border-left: 4px solid #10b981;
+  letter-spacing: 0.01em;
+}
+
+/* UX-specific styling for cards */
+.project-block--ux {
+  border: 2px solid #10b981;
+}
+.project-badge-ux {
+  background: linear-gradient(135deg,#10b981 0%,#059669 100%);
+}
+.project-simple-btn--ux {
+  background:#10b981;
+  color:white;
+}
+.project-simple-btn--ux:hover {
+  background:#059669;
+  transform:translateY(-2px);
+}
+.project-simple-tag--ux {
+  background:rgba(16,185,129,0.1);
+  color:#059669;
+  border:1px solid rgba(16,185,129,0.3);
+}
