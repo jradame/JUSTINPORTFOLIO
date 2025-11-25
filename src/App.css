@@ -1458,11 +1458,11 @@ body:not(.dark-theme) .modal__right .form__submit {
   margin-bottom: 2rem;
   font-size: 2rem;
   font-weight: 700;
-  color: #1a202c;
-  padding-left: 8px;
-  border-left: 4px solid #10b981;
+  color: #1a202c;         /* Or #fff for dark background */
   letter-spacing: 0.01em;
+  /* NO border-left, NO padding-left */
 }
+
 
 /* UX-specific styling for cards */
 .project-block--ux {
