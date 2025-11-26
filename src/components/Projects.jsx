@@ -2,11 +2,13 @@ import React from 'react';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faExternalLinkAlt } from '@fortawesome/free-solid-svg-icons';
 import { faGithub } from '@fortawesome/free-brands-svg-icons';
+import { Link } from 'react-router-dom'; // Important: import Link!
 import Skeleton from 'react-loading-skeleton';
 import ScrollReveal from './ScrollReveal';
 
-// Data split into two arrays for clarity/readability
+// Web Dev Projects
 const webProjects = [
+  // ...your web projects array as before
   {
     title: 'SkinStric Skin Care Platform 🏥',
     description: 'Professional dermatology web application built for SkinStric. Features patient portal, image upload/processing for skin analysis, and API integrations with responsive design.',
@@ -52,19 +54,20 @@ const webProjects = [
   }
 ];
 
+// UX/UI Projects
 const uxProjects = [
   {
     title: 'TipTrack 💰',
     description: 'Mobile app UX case study helping bartenders track tips, calculate tip-outs, and understand their real take-home income. Includes user research, wireframes, and high-fidelity mockups.',
     imageUrl: '/images/tiptrack-preview.png',
-    projectUrl: '/projects/tiptrack', // Internal link to dedicated page (or PDF if preferred)
+    projectUrl: '/projects/tiptrack', // Internal link to dedicated page
     technologies: ['UX Research', 'Figma', 'Personas', 'Wireframing', 'Prototyping'],
     category: 'UX Design',
     status: 'CASE STUDY',
     featured: true,
     timeline: '4-week project • Nov 2025'
   }
-  // Add more UX/UI projects here as grid grows!
+  // Add more UX/UI projects as you go!
 ];
 
 const Projects = ({ loading }) => (
@@ -78,7 +81,7 @@ const Projects = ({ loading }) => (
         </h1>
       </ScrollReveal>
 
-      {/* -- WEB DEVELOPMENT SECTION -- */}
+      {/* Web Dev Projects Section */}
       <ScrollReveal direction="up" delay={200}>
         <h2 className="projects__section-title">Web Development Projects</h2>
       </ScrollReveal>
@@ -132,7 +135,7 @@ const Projects = ({ loading }) => (
         )}
       </div>
 
-      {/* -- UX/UI SECTION -- */}
+      {/* UX/UI Projects Section */}
       <ScrollReveal direction="up" delay={1200}>
         <h2 className="projects__section-title">UX/UI Design Projects</h2>
       </ScrollReveal>
@@ -163,9 +166,10 @@ const Projects = ({ loading }) => (
                   <p className="project-simple-desc">{project.description}</p>
                   {project.timeline && (<p className="project-timeline"><small>{project.timeline}</small></p>)}
                   <div className="project-simple-links">
-                    <a href={project.projectUrl} className="project-simple-btn project-simple-btn--ux">
+                    {/* LINK to case study route */}
+                    <Link to={project.projectUrl} className="project-simple-btn project-simple-btn--ux">
                       <FontAwesomeIcon icon={faExternalLinkAlt} /> View Case Study
-                    </a>
+                    </Link>
                   </div>
                   <div className="project-simple-tags">
                     {project.technologies.map((tech, i) => (
@@ -178,7 +182,6 @@ const Projects = ({ loading }) => (
           ))
         )}
       </div>
-
     </div>
   </section>
 );

@@ -1485,3 +1485,60 @@ body:not(.dark-theme) .modal__right .form__submit {
   color:#059669;
   border:1px solid rgba(16,185,129,0.3);
 }
+
+.case-study {
+  padding-top: 96px; /* Adjust this value to match or slightly exceed your navbar height */
+}
+
+@media (max-width: 768px) {
+  .case-study {
+    padding-top: 120px; /* Extra space for mobile if your navbar is bigger */
+  }
+}
+
+.case-study {
+  padding-top: 100px; /* Match your hero or navbar height */
+}
+
+@media (max-width: 768px) {
+  .case-study {
+    padding-top: 130px; /* More on mobile if you need it */
+  }
+}
+
+.case-study__back {
+  display: flex;
+  align-items: center;
+  position: absolute;
+  top: 24px;
+  left: 36px;
+  z-index: 2;
+}
+
+@media (max-width: 768px) {
+  .case-study__back {
+    top: 12px;
+    left: 12px;
+  }
+}
+
+.back-btn {
+  color: var(--primary);
+  font-size: 1.1rem;
+  font-weight: 600;
+  text-decoration: none;
+  background: none;
+  border: none;
+  display: flex;
+  align-items: center;
+  gap: 0.4rem;
+  cursor: pointer;
+  padding: 0.4em 0.8em;
+  border-radius: 6px;
+  transition: background 0.2s;
+}
+.back-btn:hover {
+  background: var(--bg-tertiary);
+  text-decoration: underline;
+}
+

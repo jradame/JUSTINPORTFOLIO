@@ -1,17 +1,21 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faArrowLeft, faDownload } from '@fortawesome/free-solid-svg-icons';
 import { Link } from 'react-router-dom';
-import ScrollReveal from '../components/ScrollReveal';
+import ScrollReveal from './ScrollReveal';
 
 const TipTrack = () => {
+  // Scroll to top on mount
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, []);
+
   return (
     <div className="case-study">
       {/* Back Button */}
       <div className="case-study__back">
         <Link to="/#projects" className="back-btn">
-          <FontAwesomeIcon icon={faArrowLeft} />
-          Back to Projects
+          <FontAwesomeIcon icon={faArrowLeft} /> Back to Projects
         </Link>
       </div>
 
@@ -30,27 +34,46 @@ const TipTrack = () => {
         </section>
       </ScrollReveal>
 
-      {/* Overview Section */}
+      {/* Embedded Google Slides */}
+      <ScrollReveal direction="up" delay={100}>
+        <section className="case-study__slides" style={{ margin: "2.5rem auto", maxWidth: 960 }}>
+          <iframe
+            title="TipTrack Google Slides"
+            src="https://docs.google.com/presentation/d/e/2PACX-1vQd-ZfLpCwJV7qyzEYfg1ZD21oCEjS9pKQQ6vRQ_Z7Kd9rpnkw862vFQABlJrlehbXaVYB5_gDZSJMO/pubembed?start=false&loop=false&delayms=3000"
+            width="100%"
+            height="569"
+            allowFullScreen
+            frameBorder="0"
+            style={{
+              border: 0,
+              width: "100%",
+              minHeight: 400,
+              maxWidth: "100%",
+              margin: "0 auto",
+              display: "block"
+            }}
+          />
+          <a
+            href="https://docs.google.com/presentation/d/1YrqSt84y2GthTqC1OnSmYxiybb9julY2ArU-g-CGgHM/preview"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="btn btn-primary"
+            style={{ display: "block", margin: "1.1rem auto 0", maxWidth: 320, textAlign: "center" }}
+          >
+            Open Slides in Google Slides
+          </a>
+        </section>
+      </ScrollReveal>
+
+      {/* Project Overview */}
       <ScrollReveal direction="up" delay={100}>
         <section className="case-study__overview">
           <h2 className="section-title">Project Overview</h2>
           <div className="overview-grid">
-            <div className="overview-item">
-              <h3>Role</h3>
-              <p>UX Designer</p>
-            </div>
-            <div className="overview-item">
-              <h3>Duration</h3>
-              <p>4 weeks</p>
-            </div>
-            <div className="overview-item">
-              <h3>Tools</h3>
-              <p>Figma, Google Slides, User Interviews</p>
-            </div>
-            <div className="overview-item">
-              <h3>Platform</h3>
-              <p>Mobile (iOS/Android)</p>
-            </div>
+            <div className="overview-item"><h3>Role</h3><p>UX Designer</p></div>
+            <div className="overview-item"><h3>Duration</h3><p>4 weeks</p></div>
+            <div className="overview-item"><h3>Tools</h3><p>Figma, Google Slides, User Interviews</p></div>
+            <div className="overview-item"><h3>Platform</h3><p>Mobile (iOS/Android)</p></div>
           </div>
         </section>
       </ScrollReveal>
@@ -186,8 +209,7 @@ const TipTrack = () => {
       {/* Back to Projects */}
       <div className="case-study__back case-study__back--bottom">
         <Link to="/#projects" className="back-btn">
-          <FontAwesomeIcon icon={faArrowLeft} />
-          Back to Projects
+          <FontAwesomeIcon icon={faArrowLeft} /> Back to Projects
         </Link>
       </div>
     </div>
