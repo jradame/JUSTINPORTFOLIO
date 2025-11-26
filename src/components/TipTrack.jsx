@@ -21,18 +21,37 @@ const TipTrack = () => {
 
       {/* Hero Section */}
       <ScrollReveal direction="up">
-        <section className="case-study__hero">
-          <h1 className="case-study__title">TipTrack</h1>
-          <p className="case-study__tagline">
-            Helping bartenders track tips and take control of their finances
-          </p>
-          <img 
-            src="/images/tiptrack-hero.png" 
-            alt="TipTrack app mockups" 
-            className="case-study__hero-image"
-          />
-        </section>
-      </ScrollReveal>
+  <section className="case-study__hero">
+    <h1 className="case-study__title">TipTrack</h1>
+    <h2 className="case-study__subtitle">A Mobile Tip Tracking App</h2>
+    <p className="case-study__tagline">
+      Helping bartenders track tips and take control of their finances
+    </p>
+    <img 
+  src="/images/tiptrack-preview.png"
+  alt="TipTrack app feature mockups"
+  className="case-study__hero-image"
+  style={{
+    maxWidth: "360px",
+    width: "100%",
+    margin: "2rem auto 0",
+    display: "block",
+    borderRadius: "18px",
+    boxShadow: "0 4px 24px rgba(0, 0, 0, 0.13)"
+  }}
+/>
+
+    <div style={{
+      marginTop: "1.5rem",
+      color: "var(--text-muted)",
+      fontStyle: "italic",
+      fontSize: "1.1rem"
+    }}>
+      UX Case Study &nbsp; | &nbsp; Justin Adame
+    </div>
+  </section>
+</ScrollReveal>
+
 
       {/* Embedded Google Slides */}
       <ScrollReveal direction="up" delay={100}>
