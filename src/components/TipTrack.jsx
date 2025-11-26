@@ -5,7 +5,6 @@ import { Link } from 'react-router-dom';
 import ScrollReveal from './ScrollReveal';
 
 const TipTrack = () => {
-  // Scroll to top on mount
   useEffect(() => {
     window.scrollTo(0, 0);
   }, []);
@@ -21,33 +20,63 @@ const TipTrack = () => {
 
       {/* Hero Section */}
       <ScrollReveal direction="up">
-  <section className="case-study__hero">
-    <h1 className="case-study__title">TipTrack</h1>
-    <h2 className="case-study__subtitle">A Mobile Tip Tracking App</h2>
-    <p className="case-study__tagline">
-      Helping bartenders track tips and take control of their finances
-    </p>
-    <img 
-  src="/images/tiptrack-preview.png"
-  alt="TipTrack app feature mockups"
-  className="case-study__hero-image"
-  style={{
-    maxWidth: "360px",
-    width: "100%",
-    margin: "2rem auto 0",
-    display: "block",
-    borderRadius: "18px",
-    boxShadow: "0 4px 24px rgba(0, 0, 0, 0.13)"
-  }}
-/>
+        <section className="case-study__hero">
+          <h1 className="case-study__title">TipTrack</h1>
+          <h2 className="case-study__subtitle">A Mobile Tip Tracking App</h2>
+          <p className="case-study__tagline">
+            Helping bartenders track tips and take control of their finances
+          </p>
+          <img 
+            src="/images/tiptrack-preview.png"
+            alt="TipTrack app feature mockups"
+            className="case-study__hero-image"
+            style={{
+              maxWidth: "360px",
+              width: "100%",
+              margin: "2rem auto 0",
+              display: "block",
+              borderRadius: "18px",
+              boxShadow: "0 4px 24px rgba(0, 0, 0, 0.13)"
+            }}
+          />
+          <div style={{
+            marginTop: "1.5rem",
+            color: "var(--text-muted)",
+            fontStyle: "italic",
+            fontSize: "1.1rem"
+          }}>
+            UX Case Study &nbsp; | &nbsp; Justin Adame
+          </div>
+        </section>
+      </ScrollReveal>
 
-    <div style={{
-      marginTop: "1.5rem",
-      color: "var(--text-muted)",
-      fontStyle: "italic",
-      fontSize: "1.1rem"
-    }}>
-      UX Case Study &nbsp; | &nbsp; Justin Adame
+      {/* Project Overview - moved here */}
+      <ScrollReveal direction="up">
+  <section className="case-study__overview">
+    <h2 className="section-title">Project Overview</h2>
+    <div className="overview-card-grid">
+      <div className="overview-card">
+        <div className="overview-card-icon" role="img" aria-label="Role">🧑‍💻</div>
+        <div className="overview-card-title">Role</div>
+        <div className="overview-card-content">UX Designer</div>
+      </div>
+      <div className="overview-card">
+        <div className="overview-card-icon" role="img" aria-label="Duration">⏳</div>
+        <div className="overview-card-title">Duration</div>
+        <div className="overview-card-content">4 weeks</div>
+      </div>
+      <div className="overview-card">
+        <div className="overview-card-icon" role="img" aria-label="Tools">🛠️</div>
+        <div className="overview-card-title">Tools</div>
+        <div className="overview-card-content">
+          <span title="Figma">🎨</span> Figma, <span title="Slides">📊</span> Slides, <span title="Interviews">🗣️</span> Interviews
+        </div>
+      </div>
+      <div className="overview-card">
+        <div className="overview-card-icon" role="img" aria-label="Platform">📱</div>
+        <div className="overview-card-title">Platform</div>
+        <div className="overview-card-content">Mobile (iOS/Android)</div>
+      </div>
     </div>
   </section>
 </ScrollReveal>
@@ -81,19 +110,6 @@ const TipTrack = () => {
           >
             Open Slides in Google Slides
           </a>
-        </section>
-      </ScrollReveal>
-
-      {/* Project Overview */}
-      <ScrollReveal direction="up" delay={100}>
-        <section className="case-study__overview">
-          <h2 className="section-title">Project Overview</h2>
-          <div className="overview-grid">
-            <div className="overview-item"><h3>Role</h3><p>UX Designer</p></div>
-            <div className="overview-item"><h3>Duration</h3><p>4 weeks</p></div>
-            <div className="overview-item"><h3>Tools</h3><p>Figma, Google Slides, User Interviews</p></div>
-            <div className="overview-item"><h3>Platform</h3><p>Mobile (iOS/Android)</p></div>
-          </div>
         </section>
       </ScrollReveal>
 
