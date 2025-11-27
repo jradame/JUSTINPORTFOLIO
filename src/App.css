@@ -1702,7 +1702,7 @@ body:not(.dark-theme) .modal__right .form__submit {
 
 /* Adjust only the Hi‑Fi image (second design card) */
 .design-process-grid .design-card:nth-child(2) .design-card-image {
-  margin-top: 1.9rem;  /* tweak this value until both images line up */
+  margin-top: 3.6rem;  /* tweak this value until both images line up */
 }
 
 @media (max-width: 900px) {
