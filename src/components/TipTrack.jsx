@@ -26,65 +26,75 @@ const TipTrack = () => {
           <p className="case-study__tagline">
             Helping bartenders track tips and take control of their finances
           </p>
-          <img 
+          <img
             src="/images/tiptrack-preview.png"
             alt="TipTrack app feature mockups"
             className="case-study__hero-image"
             style={{
-              maxWidth: "360px",
-              width: "100%",
-              margin: "2rem auto 0",
-              display: "block",
-              borderRadius: "18px",
-              boxShadow: "0 4px 24px rgba(0, 0, 0, 0.13)"
+              maxWidth: '360px',
+              width: '100%',
+              margin: '2rem auto 0',
+              display: 'block',
+              borderRadius: '18px',
+              boxShadow: '0 4px 24px rgba(0, 0, 0, 0.13)',
             }}
           />
-          <div style={{
-            marginTop: "1.5rem",
-            color: "var(--text-muted)",
-            fontStyle: "italic",
-            fontSize: "1.1rem"
-          }}>
+          <div
+            style={{
+              marginTop: '1.5rem',
+              color: 'var(--text-muted)',
+              fontStyle: 'italic',
+              fontSize: '1.1rem',
+            }}
+          >
             UX Case Study &nbsp; | &nbsp; Justin Adame
           </div>
         </section>
       </ScrollReveal>
 
-      {/* Project Overview - moved here */}
+      {/* Project Overview */}
       <ScrollReveal direction="up">
-  <section className="case-study__overview">
-    <h2 className="section-title">Project Overview</h2>
-    <div className="overview-card-grid">
-      <div className="overview-card">
-        <div className="overview-card-icon" role="img" aria-label="Role">🧑‍💻</div>
-        <div className="overview-card-title">Role</div>
-        <div className="overview-card-content">UX Designer</div>
-      </div>
-      <div className="overview-card">
-        <div className="overview-card-icon" role="img" aria-label="Duration">⏳</div>
-        <div className="overview-card-title">Duration</div>
-        <div className="overview-card-content">4 weeks</div>
-      </div>
-      <div className="overview-card">
-        <div className="overview-card-icon" role="img" aria-label="Tools">🛠️</div>
-        <div className="overview-card-title">Tools</div>
-        <div className="overview-card-content">
-          <span title="Figma">🎨</span> Figma, <span title="Slides">📊</span> Slides, <span title="Interviews">🗣️</span> Interviews
-        </div>
-      </div>
-      <div className="overview-card">
-        <div className="overview-card-icon" role="img" aria-label="Platform">📱</div>
-        <div className="overview-card-title">Platform</div>
-        <div className="overview-card-content">Mobile (iOS/Android)</div>
-      </div>
-    </div>
-  </section>
-</ScrollReveal>
-
+        <section className="case-study__overview">
+          <h2 className="section-title">Project Overview</h2>
+          <div className="overview-card-grid">
+            <div className="overview-card">
+              <div className="overview-card-icon" role="img" aria-label="Role">
+                🧑‍💻
+              </div>
+              <div className="overview-card-title">Role</div>
+              <div className="overview-card-content">UX Designer</div>
+            </div>
+            <div className="overview-card">
+              <div className="overview-card-icon" role="img" aria-label="Duration">
+                ⏳
+              </div>
+              <div className="overview-card-title">Duration</div>
+              <div className="overview-card-content">4 weeks</div>
+            </div>
+            <div className="overview-card">
+              <div className="overview-card-icon" role="img" aria-label="Tools">
+                🛠️
+              </div>
+              <div className="overview-card-title">Tools</div>
+              <div className="overview-card-content">
+                <span title="Figma">🎨</span> Figma, <span title="Slides">📊</span> Slides,{' '}
+                <span title="Interviews">🗣️</span> Interviews
+              </div>
+            </div>
+            <div className="overview-card">
+              <div className="overview-card-icon" role="img" aria-label="Platform">
+                📱
+              </div>
+              <div className="overview-card-title">Platform</div>
+              <div className="overview-card-content">Mobile (iOS/Android)</div>
+            </div>
+          </div>
+        </section>
+      </ScrollReveal>
 
       {/* Embedded Google Slides */}
       <ScrollReveal direction="up" delay={100}>
-        <section className="case-study__slides" style={{ margin: "2.5rem auto", maxWidth: 960 }}>
+        <section className="case-study__slides" style={{ margin: '2.5rem auto', maxWidth: 960 }}>
           <iframe
             title="TipTrack Google Slides"
             src="https://docs.google.com/presentation/d/e/2PACX-1vQd-ZfLpCwJV7qyzEYfg1ZD21oCEjS9pKQQ6vRQ_Z7Kd9rpnkw862vFQABlJrlehbXaVYB5_gDZSJMO/pubembed?start=false&loop=false&delayms=3000"
@@ -94,11 +104,11 @@ const TipTrack = () => {
             frameBorder="0"
             style={{
               border: 0,
-              width: "100%",
+              width: '100%',
               minHeight: 400,
-              maxWidth: "100%",
-              margin: "0 auto",
-              display: "block"
+              maxWidth: '100%',
+              margin: '0 auto',
+              display: 'block',
             }}
           />
           <a
@@ -106,60 +116,88 @@ const TipTrack = () => {
             target="_blank"
             rel="noopener noreferrer"
             className="btn btn-primary"
-            style={{ display: "block", margin: "1.1rem auto 0", maxWidth: 320, textAlign: "center" }}
+            style={{ display: 'block', margin: '1.1rem auto 0', maxWidth: 320, textAlign: 'center' }}
           >
             Open Slides in Google Slides
           </a>
         </section>
       </ScrollReveal>
 
-      {/* The Problem */}
+      {/* Problem & Solution */}
       <ScrollReveal direction="up" delay={100}>
         <section className="case-study__section">
           <h2 className="section-title">The Problem</h2>
-          
+
+          <div className="case-study__problem-solution">
+            <div className="ps-card ps-card--problem">
+              <h3 className="section-subtitle">The Problem</h3>
+              <p className="section-text">
+                Bartenders earn inconsistent income from cash tips, credit tips, and mandatory tip-outs,
+                but most still track earnings with memory, notes apps, or pen and paper. Without a clear
+                view of real take-home pay, it’s hard to budget, plan, or see whether shifts are truly worth
+                it.
+              </p>
+            </div>
+
+            <div className="ps-card ps-card--solution">
+              <h3 className="section-subtitle">The Solution</h3>
+              <p className="section-text">
+                TipTrack is a mobile-first app that lets bartenders log a full shift in under 30 seconds,
+                automatically calculate tip-outs, and instantly see true take-home pay. Clear weekly and
+                monthly views help them spot patterns, choose better shifts, and feel in control of their
+                money.
+              </p>
+            </div>
+          </div>
         </section>
       </ScrollReveal>
 
-      {/* The Solution */}
-      <ScrollReveal direction="up" delay={100}>
-  <section className="case-study__section">
-    <div className="case-study__problem-solution">
-      <div className="ps-card ps-card--problem">
-        <h2 className="section-title">The Problem</h2>
-        <p className="section-text">
-          Bartenders earn inconsistent income from cash tips, credit tips, and mandatory tip-outs, 
-          but most still track earnings with memory, notes apps, or pen and paper. Without a clear 
-          view of real take-home pay, it’s hard to budget, plan, or see whether shifts are truly worth it.
-        </p>
-      </div>
-
-      <div className="ps-card ps-card--solution">
-        <h2 className="section-title">The Solution</h2>
-        <p className="section-text">
-          TipTrack is a mobile-first app that lets bartenders log a full shift in under 30 seconds, 
-          automatically calculate tip-outs, and instantly see true take-home pay. Clear weekly and 
-          monthly views help them spot patterns, choose better shifts, and feel in control of their money.
-        </p>
-      </div>
-    </div>
-  </section>
-</ScrollReveal>
-
-
-      {/* High-Fidelity Mockups */}
+      {/* Design Process – Lo‑Fi & Hi‑Fi Cards */}
       <ScrollReveal direction="up" delay={100}>
         <section className="case-study__section">
-          <h3 className="section-subtitle">High-Fidelity Mockups</h3>
-          <p className="section-text">
-            Refined designs featuring TipTrack branding and intuitive navigation. The green color scheme 
-            emphasizes financial success and positive earnings tracking.
-          </p>
-          <img 
-            src="/images/tiptrack-hifi.png" 
-            alt="TipTrack high-fidelity mockups" 
-            className="case-study__image"
-          />
+          <h2 className="section-title">Design Process</h2>
+
+          <div className="design-process-grid">
+            {/* Low‑Fidelity Wireframes Card */}
+            <div className="design-card">
+              <h3 className="section-subtitle">Low-Fidelity Wireframes</h3>
+              <p className="section-text">
+                Started with quick sketches and low-fidelity wireframes to map the core flow: logging a
+                shift, viewing weekly earnings, and comparing venues. This made it easy to test navigation,
+                field order, and screen hierarchy with bartenders before investing in visual design.
+              </p>
+              <ul className="design-list">
+                <li>Focused on a 30-second shift logging flow from first tap to saved entry.</li>
+                <li>Explored home layouts to surface weekly earnings and trends.</li>
+                <li>Compared tab vs. bottom navigation for faster access to key screens.</li>
+              </ul>
+              <img
+                src="/images/tiptrack-wireframes.png"
+                alt="TipTrack low-fidelity wireframes"
+                className="case-study__image design-card-image"
+              />
+            </div>
+
+            {/* High‑Fidelity Mockups Card */}
+            <div className="design-card">
+              <h3 className="section-subtitle">High-Fidelity Mockups</h3>
+              <p className="section-text">
+                Refined the wireframes into a clean, production-ready UI using TipTrack branding, clear
+                typography, and a green palette that reinforces financial growth. Screens highlight
+                at-a-glance earnings, fast shift entry, and simple analytics.
+              </p>
+              <ul className="design-list">
+                <li>Clarified visual hierarchy for earnings vs. secondary stats.</li>
+                <li>Aligned colors and iconography with the “money clarity” concept.</li>
+                <li>Polished interaction details for buttons, cards, and graphs.</li>
+              </ul>
+              <img
+                src="/images/tiptrack-hifi.png"
+                alt="TipTrack high-fidelity mockups"
+                className="case-study__image design-card-image"
+              />
+            </div>
+          </div>
         </section>
       </ScrollReveal>
 
@@ -170,19 +208,19 @@ const TipTrack = () => {
           <div className="features-grid">
             <div className="feature-card">
               <h3>⚡ 30-Second Logging</h3>
-              <p>Pre-filled fields and smart defaults reduce entry time from 3+ minutes to under 30 seconds</p>
+              <p>Pre-filled fields and smart defaults reduce entry time from 3+ minutes to under 30 seconds.</p>
             </div>
             <div className="feature-card">
               <h3>💰 Automatic Calculations</h3>
-              <p>Instant tip-out calculations show real take-home pay, eliminating manual math errors</p>
+              <p>Instant tip-out calculations show real take-home pay, eliminating manual math errors.</p>
             </div>
             <div className="feature-card">
               <h3>📊 Visual Analytics</h3>
-              <p>Identify your best earning days (like Fridays) and most profitable venues at a glance</p>
+              <p>Identify your best earning days and most profitable venues at a glance.</p>
             </div>
             <div className="feature-card">
               <h3>✅ Financial Control</h3>
-              <p>Reliable income tracking enables effective budgeting and savings planning</p>
+              <p>Reliable income tracking enables effective budgeting and savings planning.</p>
             </div>
           </div>
         </section>
@@ -192,9 +230,9 @@ const TipTrack = () => {
       <ScrollReveal direction="up" delay={100}>
         <section className="case-study__section">
           <h2 className="section-title">Impact & Results</h2>
-          <img 
-            src="/images/tiptrack-impact.png" 
-            alt="TipTrack before and after" 
+          <img
+            src="/images/tiptrack-impact.png"
+            alt="TipTrack before and after"
             className="case-study__image"
           />
         </section>
@@ -205,14 +243,10 @@ const TipTrack = () => {
         <section className="case-study__download">
           <h2 className="section-title">Full Case Study</h2>
           <p className="section-text">
-            Download the complete case study presentation including user research, personas, 
-            journey maps, competitive analysis, and detailed design process.
+            Download the complete case study presentation including user research, personas, journey maps,
+            competitive analysis, and detailed design process.
           </p>
-          <a 
-            href="/files/TipTrack_Case_Study.pdf" 
-            download
-            className="download-btn"
-          >
+          <a href="/files/TipTrack_Case_Study.pdf" download className="download-btn">
             <FontAwesomeIcon icon={faDownload} />
             Download Full Case Study (PDF)
           </a>
@@ -224,15 +258,15 @@ const TipTrack = () => {
         <section className="case-study__section">
           <h2 className="section-title">Next Steps</h2>
           <ul className="next-steps-list">
-            <li>Conduct usability testing with 5-8 bartenders</li>
-            <li>Iterate based on user feedback</li>
-            <li>Build iOS/Android MVP</li>
-            <li>Partner with restaurant management platforms for integration</li>
+            <li>Conduct usability testing with 5–8 bartenders.</li>
+            <li>Iterate based on user feedback.</li>
+            <li>Build iOS/Android MVP.</li>
+            <li>Partner with restaurant management platforms for integration.</li>
           </ul>
         </section>
       </ScrollReveal>
 
-      {/* Back to Projects */}
+      {/* Back to Projects (bottom) */}
       <div className="case-study__back case-study__back--bottom">
         <Link to="/#projects" className="back-btn">
           <FontAwesomeIcon icon={faArrowLeft} /> Back to Projects
