@@ -117,44 +117,35 @@ const TipTrack = () => {
       <ScrollReveal direction="up" delay={100}>
         <section className="case-study__section">
           <h2 className="section-title">The Problem</h2>
-          <p className="section-text">
-            Bartenders earn inconsistent income from cash tips, credit card tips, and must tip-out 
-            support staff—yet most track earnings using memory, notes apps, or pen and paper. Without 
-            clear visibility into actual take-home pay, bartenders like Justin struggle to budget and 
-            often feel money disappears between shifts.
-          </p>
+          
         </section>
       </ScrollReveal>
 
       {/* The Solution */}
       <ScrollReveal direction="up" delay={100}>
-        <section className="case-study__section">
-          <h2 className="section-title">The Solution</h2>
-          <p className="section-text">
-            TipTrack is a mobile-first app designed for speed and clarity. Bartenders can log complete 
-            shifts in under 30 seconds, automatically calculate tip-outs, visualize earnings patterns, 
-            and track their real income across multiple venues—helping them take control of their finances.
-          </p>
-        </section>
-      </ScrollReveal>
+  <section className="case-study__section">
+    <div className="case-study__problem-solution">
+      <div className="ps-card ps-card--problem">
+        <h2 className="section-title">The Problem</h2>
+        <p className="section-text">
+          Bartenders earn inconsistent income from cash tips, credit tips, and mandatory tip-outs, 
+          but most still track earnings with memory, notes apps, or pen and paper. Without a clear 
+          view of real take-home pay, it’s hard to budget, plan, or see whether shifts are truly worth it.
+        </p>
+      </div>
 
-      {/* Design Process - Wireframes */}
-      <ScrollReveal direction="up" delay={100}>
-        <section className="case-study__section">
-          <h2 className="section-title">Design Process</h2>
-          <h3 className="section-subtitle">Low-Fidelity Wireframes</h3>
-          <p className="section-text">
-            Early sketches exploring TipTrack's core screens: Dashboard for quick earnings overview, 
-            Add Shift for 30-second logging with automatic tip-out calculations, and Analytics for 
-            identifying profitable patterns across shifts and venues.
-          </p>
-          <img 
-            src="/images/tiptrack-wireframes.png" 
-            alt="TipTrack wireframes" 
-            className="case-study__image"
-          />
-        </section>
-      </ScrollReveal>
+      <div className="ps-card ps-card--solution">
+        <h2 className="section-title">The Solution</h2>
+        <p className="section-text">
+          TipTrack is a mobile-first app that lets bartenders log a full shift in under 30 seconds, 
+          automatically calculate tip-outs, and instantly see true take-home pay. Clear weekly and 
+          monthly views help them spot patterns, choose better shifts, and feel in control of their money.
+        </p>
+      </div>
+    </div>
+  </section>
+</ScrollReveal>
+
 
       {/* High-Fidelity Mockups */}
       <ScrollReveal direction="up" delay={100}>
