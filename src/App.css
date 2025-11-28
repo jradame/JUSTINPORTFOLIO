@@ -1930,4 +1930,47 @@ body:not(.dark-theme) .modal__right .form__submit {
   font-size: 1rem;
 }
 
+@media (max-width: 768px) {
+  .case-study__back:not(.case-study__back--bottom) {
+    display: none;
+  }
+  
+  .case-study__hero {
+    margin-top: 2rem;
+  }
+}
+
+.back-to-top-container {
+  display: flex;
+  justify-content: center;
+  margin: 3rem auto 2rem;
+  padding: 0 1rem;
+}
+
+.back-to-top-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 0.85rem 1.8rem;
+  background: var(--primary);
+  color: #fff;
+  border: none;
+  border-radius: 8px;
+  font-size: 1rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.25s ease;
+  box-shadow: 0 2px 12px rgba(52,211,153,0.3);
+}
+
+.back-to-top-btn:hover {
+  background: #059669;
+  transform: translateY(-2px);
+  box-shadow: 0 4px 18px rgba(52,211,153,0.4);
+}
+
+.back-to-top-btn svg {
+  font-size: 1rem;
+}
+
 

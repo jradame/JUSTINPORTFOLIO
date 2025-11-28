@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from 'react';
-import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
+import { BrowserRouter as Router, Routes, Route, Link } from 'react-router-dom';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faSun, faMoon } from '@fortawesome/free-solid-svg-icons';
+import { faSun, faMoon, faArrowLeft } from '@fortawesome/free-solid-svg-icons';
 import Skeleton from 'react-loading-skeleton';
 import 'react-loading-skeleton/dist/skeleton.css';
 import './App.css';
@@ -11,7 +11,7 @@ import Hero from './components/Hero';
 import Projects from './components/Projects';
 import Modal from './components/Modal';
 import Footer from './components/Footer';
-import TipTrack from './components/TipTrack'; // <-- Adjust path if needed
+import TipTrack from './components/TipTrack';
 
 function App() {
   const [isDarkMode, setIsDarkMode] = useState(() => localStorage.getItem('theme') === 'dark');
@@ -68,10 +68,20 @@ function App() {
         {/* NAVBAR */}
         <nav className="navbar">
           <div className="nav-container">
-            <button className="nav__logo-text" onClick={() => window.scrollTo({ top: 0, behavior: 'smooth' })} aria-label="Scroll to top">
+            <Link 
+              to="/" 
+              className="nav__logo-text" 
+              aria-label="Go to homepage"
+              onClick={() => window.scrollTo({ top: 0, behavior: 'smooth' })}
+            >
               Justin Adame
-            </button>
-            <button className={`hamburger ${menuOpen ? 'active' : ''}`} onClick={toggleMenu} aria-label="Toggle navigation menu" aria-expanded={menuOpen}>
+            </Link>
+            <button
+              className={`hamburger ${menuOpen ? 'active' : ''}`}
+              onClick={toggleMenu}
+              aria-label="Toggle navigation menu"
+              aria-expanded={menuOpen}
+            >
               <span className="bar"></span>
               <span className="bar"></span>
               <span className="bar"></span>
@@ -86,11 +96,28 @@ function App() {
                 </div>
               ) : (
                 <>
-                  <li><button className="nav__link--anchor" onClick={() => openModal('about')}>About</button></li>
-                  <li><button className="nav__link--anchor" onClick={scrollToProjects}>Projects</button></li>
-                  <li><button className="nav__link--anchor" onClick={() => openModal('contact')}>Contact</button></li>
                   <li>
-                    <button className={`theme-toggle ${isDarkMode ? 'theme-toggle--dark' : ''}`} onClick={toggleTheme} disabled={isTransitioning} aria-label={`Switch to ${isDarkMode ? 'light' : 'dark'} mode`}>
+                    <button className="nav__link--anchor" onClick={() => openModal('about')}>
+                      About
+                    </button>
+                  </li>
+                  <li>
+                    <button className="nav__link--anchor" onClick={scrollToProjects}>
+                      Projects
+                    </button>
+                  </li>
+                  <li>
+                    <button className="nav__link--anchor" onClick={() => openModal('contact')}>
+                      Contact
+                    </button>
+                  </li>
+                  <li>
+                    <button
+                      className={`theme-toggle ${isDarkMode ? 'theme-toggle--dark' : ''}`}
+                      onClick={toggleTheme}
+                      disabled={isTransitioning}
+                      aria-label={`Switch to ${isDarkMode ? 'light' : 'dark'} mode`}
+                    >
                       <FontAwesomeIcon icon={isDarkMode ? faSun : faMoon} className="theme-toggle__icon" />
                     </button>
                   </li>
@@ -100,6 +127,7 @@ function App() {
           </div>
           {menuOpen && <div className="menu-overlay" onClick={closeMenu} aria-label="Close menu" />}
         </nav>
+
         {/* ROUTER HANDLES PAGES */}
         <Routes>
           <Route
@@ -108,6 +136,18 @@ function App() {
               <>
                 <Hero loading={loading} openModal={openModal} />
                 <Projects loading={loading} />
+
+                {/* Back to Top Button */}
+                <div className="back-to-top-container">
+                  <button 
+                    onClick={() => window.scrollTo({ top: 0, behavior: 'smooth' })}
+                    className="back-to-top-btn"
+                  >
+                    <FontAwesomeIcon icon={faArrowLeft} style={{ transform: 'rotate(90deg)' }} /> 
+                    Back to Top
+                  </button>
+                </div>
+
                 <Footer loading={loading} toggleModal={openModal} />
                 <Modal isOpen={modalOpen} onClose={closeModal} loading={modalLoading} modalType={modalType} />
               </>
