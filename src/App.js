@@ -12,6 +12,7 @@ import Projects from './components/Projects';
 import Modal from './components/Modal';
 import Footer from './components/Footer';
 import TipTrack from './components/TipTrack';
+import EarlyDrop from './components/EarlyDrop';
 
 function App() {
   const [isDarkMode, setIsDarkMode] = useState(() => localStorage.getItem('theme') === 'dark');
@@ -154,6 +155,7 @@ function App() {
             }
           />
           <Route path="/projects/tiptrack" element={<TipTrack />} />
+          <Route path="/projects/earlydrop" element={<EarlyDrop />} />
         </Routes>
       </div>
     </Router>

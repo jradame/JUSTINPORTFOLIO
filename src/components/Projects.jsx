@@ -2,13 +2,12 @@ import React from 'react';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faExternalLinkAlt } from '@fortawesome/free-solid-svg-icons';
 import { faGithub } from '@fortawesome/free-brands-svg-icons';
-import { Link } from 'react-router-dom'; // Important: import Link!
+import { Link } from 'react-router-dom';
 import Skeleton from 'react-loading-skeleton';
 import ScrollReveal from './ScrollReveal';
 
 // Web Dev Projects
 const webProjects = [
-  // ...your web projects array as before
   {
     title: 'SkinStric Skin Care Platform 🏥',
     description: 'Professional dermatology web application built for SkinStric. Features patient portal, image upload/processing for skin analysis, and API integrations with responsive design.',
@@ -60,14 +59,24 @@ const uxProjects = [
     title: 'TipTrack 💰',
     description: 'Mobile app UX case study helping bartenders track tips, calculate tip-outs, and understand their real take-home income. Includes user research, wireframes, and high-fidelity mockups.',
     imageUrl: '/images/tiptrack-preview.png',
-    projectUrl: '/projects/tiptrack', // Internal link to dedicated page
+    projectUrl: '/projects/tiptrack',
     technologies: ['UX Research', 'Figma', 'Personas', 'Wireframing', 'Prototyping'],
     category: 'UX Design',
     status: 'CASE STUDY',
     featured: true,
     timeline: '4-week project • Nov 2025'
+  },
+  {
+    title: 'EarlyDrop 🎵',
+    description: 'Music pre-order app helping fans stream and order new releases early. Includes usability testing, user research, and high-fidelity prototypes.',
+    imageUrl: 'placeholder',
+    projectUrl: '/projects/earlydrop',
+    technologies: ['UX Research', 'Figma', 'Usability Testing', 'Prototyping'],
+    category: 'UX Design',
+    status: 'CASE STUDY',
+    featured: true,
+    timeline: '3-week project • Jun-Jul 2022'
   }
-  // Add more UX/UI projects as you go!
 ];
 
 const Projects = ({ loading }) => (
@@ -158,15 +167,16 @@ const Projects = ({ loading }) => (
                 {project.featured && (
                   <div className="project-badge-featured project-badge-ux">⭐ UX Case Study</div>
                 )}
-                <div className="project-image-container">
-                  <img src={project.imageUrl} alt={project.title + ' preview'} className="project-image-simple" />
+                <div className={`project-image-container ${project.imageUrl === 'placeholder' ? 'placeholder' : ''}`}>
+                  {project.imageUrl !== 'placeholder' && (
+                    <img src={project.imageUrl} alt={project.title + ' preview'} className="project-image-simple" />
+                  )}
                 </div>
                 <div className="project-simple-info">
                   <h3 className="project-simple-title">{project.title}</h3>
                   <p className="project-simple-desc">{project.description}</p>
                   {project.timeline && (<p className="project-timeline"><small>{project.timeline}</small></p>)}
                   <div className="project-simple-links">
-                    {/* LINK to case study route */}
                     <Link to={project.projectUrl} className="project-simple-btn project-simple-btn--ux">
                       <FontAwesomeIcon icon={faExternalLinkAlt} /> View Case Study
                     </Link>
