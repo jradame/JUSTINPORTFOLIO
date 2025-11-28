@@ -5,7 +5,6 @@ import { Link } from 'react-router-dom';
 import ScrollReveal from './ScrollReveal';
 import Footer from '../components/Footer';
 
-
 const TipTrack = () => {
   useEffect(() => {
     window.scrollTo(0, 0);
@@ -136,7 +135,7 @@ const TipTrack = () => {
               <p className="section-text">
                 Bartenders earn inconsistent income from cash tips, credit tips, and mandatory tip-outs,
                 but most still track earnings with memory, notes apps, or pen and paper. Without a clear
-                view of real take-home pay, it’s hard to budget, plan, or see whether shifts are truly worth
+                view of real take-home pay, it's hard to budget, plan, or see whether shifts are truly worth
                 it.
               </p>
             </div>
@@ -174,7 +173,7 @@ const TipTrack = () => {
                 <li>Compared tab vs. bottom navigation for faster access to key screens.</li>
               </ul>
               <img
-                src="/images/lofiwireframe1.png"
+                src="/images/lofiwireframes.png"
                 alt="TipTrack low-fidelity wireframes"
                 className="case-study__image design-card-image"
               />
@@ -190,7 +189,7 @@ const TipTrack = () => {
               </p>
               <ul className="design-list">
                 <li>Clarified visual hierarchy for earnings vs. secondary stats.</li>
-                <li>Aligned colors and iconography with the “money clarity” concept.</li>
+                <li>Aligned colors and iconography with the "money clarity" concept.</li>
                 <li>Polished interaction details for buttons, cards, and graphs.</li>
               </ul>
               <img
@@ -204,107 +203,111 @@ const TipTrack = () => {
       </ScrollReveal>
 
       {/* Key Features */}
-<ScrollReveal direction="up" delay={100}>
-  <section className="case-study__section">
-    <h2 className="section-title">Key Features</h2>
-    <div className="features-grid">
-      <div className="feature-card">
-        <div className="feature-icon">⚡</div>
-        <h3 className="feature-title">30-Second Logging</h3>
-        <p className="feature-description">
-          Pre-filled fields and smart defaults reduce entry time from 3+ minutes to under 30 seconds.
-        </p>
-      </div>
-      <div className="feature-card">
-        <div className="feature-icon">💰</div>
-        <h3 className="feature-title">Automatic Calculations</h3>
-        <p className="feature-description">
-          Instant tip-out calculations show real take-home pay, eliminating manual math errors.
-        </p>
-      </div>
-      <div className="feature-card">
-        <div className="feature-icon">📊</div>
-        <h3 className="feature-title">Visual Analytics</h3>
-        <p className="feature-description">
-          Identify your best earning days and most profitable venues at a glance.
-        </p>
-      </div>
-      <div className="feature-card">
-        <div className="feature-icon">✅</div>
-        <h3 className="feature-title">Financial Control</h3>
-        <p className="feature-description">
-          Reliable income tracking enables effective budgeting and savings planning.
-        </p>
-      </div>
-    </div>
-  </section>
-</ScrollReveal>
-
+      <ScrollReveal direction="up" delay={100}>
+        <section className="case-study__section">
+          <h2 className="section-title">Key Features</h2>
+          <div className="features-grid">
+            <div className="feature-card">
+              <div className="feature-icon">⚡</div>
+              <h3 className="feature-title">30-Second Logging</h3>
+              <p className="feature-description">
+                Pre-filled fields and smart defaults reduce entry time from 3+ minutes to under 30 seconds.
+              </p>
+            </div>
+            <div className="feature-card">
+              <div className="feature-icon">💰</div>
+              <h3 className="feature-title">Automatic Calculations</h3>
+              <p className="feature-description">
+                Instant tip-out calculations show real take-home pay, eliminating manual math errors.
+              </p>
+            </div>
+            <div className="feature-card">
+              <div className="feature-icon">📊</div>
+              <h3 className="feature-title">Visual Analytics</h3>
+              <p className="feature-description">
+                Identify your best earning days and most profitable venues at a glance.
+              </p>
+            </div>
+            <div className="feature-card">
+              <div className="feature-icon">✅</div>
+              <h3 className="feature-title">Financial Control</h3>
+              <p className="feature-description">
+                Reliable income tracking enables effective budgeting and savings planning.
+              </p>
+            </div>
+          </div>
+        </section>
+      </ScrollReveal>
 
       {/* Impact & Results */}
-<ScrollReveal direction="up" delay={100}>
-  <section className="case-study__section">
-    <h2 className="section-title">Impact & Results</h2>
-    
-    <div className="impact-card">
-      <h3 className="section-subtitle">Key Outcomes</h3>
-      <ul className="impact-list">
-        <li><strong>3+ minutes → 30 seconds:</strong> Shift logging time reduced by 90% with smart defaults and pre-filled fields.</li>
-        <li><strong>Clear financial visibility:</strong> Bartenders can instantly see real take-home pay after tip-outs, eliminating guesswork.</li>
-        <li><strong>Better budgeting:</strong> Weekly and monthly earnings views help users identify profitable shifts and plan finances.</li>
-        <li><strong>Reduced errors:</strong> Automatic calculations eliminate manual math mistakes in tip-out tracking.</li>
-      </ul>
-      
-      {/* Optional: Keep your impact image if you have a before/after visual
-      <img
-        src="/images/tiptrack-impact.png"
-        alt="TipTrack impact visualization"
-        className="impact-image"
-      /> */}
-    </div>
-  </section>
-</ScrollReveal>
+      <ScrollReveal direction="up" delay={100}>
+        <section className="case-study__section">
+          <h2 className="section-title">Impact & Results</h2>
 
+          <div className="impact-card">
+            <h3 className="section-subtitle">Key Outcomes</h3>
+            <ul className="impact-list">
+              <li>
+                <strong>3+ minutes → 30 seconds:</strong> Shift logging time reduced by 90% with smart
+                defaults and pre-filled fields.
+              </li>
+              <li>
+                <strong>Clear financial visibility:</strong> Bartenders can instantly see real take-home pay
+                after tip-outs, eliminating guesswork.
+              </li>
+              <li>
+                <strong>Better budgeting:</strong> Weekly and monthly earnings views help users identify
+                profitable shifts and plan finances.
+              </li>
+              <li>
+                <strong>Reduced errors:</strong> Automatic calculations eliminate manual math mistakes in
+                tip-out tracking.
+              </li>
+            </ul>
+          </div>
+        </section>
+      </ScrollReveal>
 
-     {/* Download PDF */}
-<ScrollReveal direction="up" delay={100}>
-  <section className="case-study__section">
-    <div className="download-card">
-      <h2 className="section-title">Full Case Study</h2>
-      <p className="download-description">
-        Download the complete case study presentation including user research, personas, journey maps,
-        competitive analysis, and detailed design process.
-      </p>
-      <a href="/files/TipTrack_Case_Study.pdf" download className="download-btn">
-        <FontAwesomeIcon icon={faDownload} />
-        Download Full Case Study (PDF)
-      </a>
-    </div>
-  </section>
-</ScrollReveal>
-
+      {/* Download PDF */}
+      <ScrollReveal direction="up" delay={100}>
+        <section className="case-study__section">
+          <div className="download-card">
+            <h2 className="section-title">Full Case Study</h2>
+            <p className="download-description">
+              Download the complete case study presentation including user research, personas, journey maps,
+              competitive analysis, and detailed design process.
+            </p>
+            <a href="/files/TipTrack_Case_Study.pdf" download className="download-btn">
+              <FontAwesomeIcon icon={faDownload} />
+              Download Full Case Study (PDF)
+            </a>
+          </div>
+        </section>
+      </ScrollReveal>
 
       {/* Next Steps */}
-<ScrollReveal direction="up" delay={100}>
-  <section className="case-study__section">
-    <div className="next-steps-card">
-      <h2 className="section-title">Next Steps</h2>
-      <ul className="next-steps-list">
-        <li>Conduct usability testing with 5–8 bartenders to validate the design.</li>
-        <li>Iterate on the prototype based on real user feedback and pain points.</li>
-        <li>Build an iOS/Android MVP with core features: shift logging, tip-outs, and analytics.</li>
-        <li>Partner with restaurant management platforms for seamless integration.</li>
-      </ul>
-    </div>
-  </section>
-</ScrollReveal>
+      <ScrollReveal direction="up" delay={100}>
+        <section className="case-study__section">
+          <div className="next-steps-card">
+            <h2 className="section-title">Next Steps</h2>
+            <ul className="next-steps-list">
+              <li>Conduct usability testing with 5–8 bartenders to validate the design.</li>
+              <li>Iterate on the prototype based on real user feedback and pain points.</li>
+              <li>Build an iOS/Android MVP with core features: shift logging, tip-outs, and analytics.</li>
+              <li>Partner with restaurant management platforms for seamless integration.</li>
+            </ul>
+          </div>
+        </section>
+      </ScrollReveal>
 
-
-           {/* Back to Projects (bottom) */}
-      <div className="case-study__back case-study__back--bottom">
+      {/* Bottom Navigation - Side by Side */}
+      <div className="case-study__bottom-nav">
         <Link to="/#projects" className="back-btn">
           <FontAwesomeIcon icon={faArrowLeft} /> Back to Projects
         </Link>
+        <button onClick={() => window.scrollTo({ top: 0, behavior: 'smooth' })} className="back-btn">
+          <FontAwesomeIcon icon={faArrowLeft} style={{ transform: 'rotate(90deg)' }} /> Back to Top
+        </button>
       </div>
 
       {/* Footer */}
@@ -314,6 +317,3 @@ const TipTrack = () => {
 };
 
 export default TipTrack;
-
-
-
