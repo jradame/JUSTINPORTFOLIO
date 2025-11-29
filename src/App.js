@@ -6,7 +6,6 @@ import Skeleton from 'react-loading-skeleton';
 import 'react-loading-skeleton/dist/skeleton.css';
 import './App.css';
 
-// Import all your components
 import Hero from './components/Hero';
 import Projects from './components/Projects';
 import Modal from './components/Modal';
@@ -59,7 +58,9 @@ function App() {
   const toggleMenu = () => setMenuOpen(!menuOpen);
 
   const scrollToProjects = () => {
-    document.querySelector('.projects').scrollIntoView({ behavior: 'smooth' });
+    const el = document.querySelector('.projects');
+    if (!el) return;
+    el.scrollIntoView({ behavior: 'smooth' });
     if (menuOpen) setMenuOpen(false);
   };
 
@@ -69,9 +70,9 @@ function App() {
         {/* NAVBAR */}
         <nav className="navbar">
           <div className="nav-container">
-            <Link 
-              to="/" 
-              className="nav__logo-text" 
+            <Link
+              to="/"
+              className="nav__logo-text"
               aria-label="Go to homepage"
               onClick={() => window.scrollTo({ top: 0, behavior: 'smooth' })}
             >
@@ -103,9 +104,15 @@ function App() {
                     </button>
                   </li>
                   <li>
-                    <button className="nav__link--anchor" onClick={scrollToProjects}>
+                    <Link
+                      to="/#projects"
+                      className="nav__link--anchor"
+                      onClick={() => {
+                        scrollToProjects();
+                      }}
+                    >
                       Projects
-                    </button>
+                    </Link>
                   </li>
                   <li>
                     <button className="nav__link--anchor" onClick={() => openModal('contact')}>
@@ -140,23 +147,30 @@ function App() {
 
                 {/* Back to Top Button */}
                 <div className="back-to-top-container">
-                  <button 
+                  <button
                     onClick={() => window.scrollTo({ top: 0, behavior: 'smooth' })}
                     className="back-to-top-btn"
                   >
-                    <FontAwesomeIcon icon={faArrowLeft} style={{ transform: 'rotate(90deg)' }} /> 
+                    <FontAwesomeIcon icon={faArrowLeft} style={{ transform: 'rotate(90deg)' }} />
                     Back to Top
                   </button>
                 </div>
 
                 <Footer loading={loading} toggleModal={openModal} />
-                <Modal isOpen={modalOpen} onClose={closeModal} loading={modalLoading} modalType={modalType} />
               </>
             }
           />
           <Route path="/projects/tiptrack" element={<TipTrack />} />
           <Route path="/projects/earlydrop" element={<EarlyDrop />} />
         </Routes>
+
+        {/* Global Modal */}
+        <Modal
+          isOpen={modalOpen}
+          onClose={closeModal}
+          loading={modalLoading}
+          modalType={modalType}
+        />
       </div>
     </Router>
   );
