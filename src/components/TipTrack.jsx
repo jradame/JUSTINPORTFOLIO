@@ -173,7 +173,7 @@ const TipTrack = () => {
                 <li>Compared tab vs. bottom navigation for faster access to key screens.</li>
               </ul>
               <img
-                src="/images/lofiwireframes.png"
+                src="/images/lofiwireframe1.png"
                 alt="TipTrack low-fidelity wireframes"
                 className="case-study__image design-card-image"
               />
@@ -305,7 +305,10 @@ const TipTrack = () => {
         <Link to="/#projects" className="back-btn">
           <FontAwesomeIcon icon={faArrowLeft} /> Back to Projects
         </Link>
-        <button onClick={() => window.scrollTo({ top: 0, behavior: 'smooth' })} className="back-btn">
+        <button
+          onClick={() => window.scrollTo({ top: 0, behavior: 'smooth' })}
+          className="back-btn"
+        >
           <FontAwesomeIcon icon={faArrowLeft} style={{ transform: 'rotate(90deg)' }} /> Back to Top
         </button>
       </div>
