@@ -28,8 +28,8 @@ const EarlyDrop = () => {
             Stream and pre-order new music before it officially drops
           </p>
           <img
-            src="/images/earlydrop-preview.png"
-            alt="EarlyDrop app mockups"
+            src="/images/earlydropHiFi.png"
+            alt="EarlyDrop high-fidelity mockup"
             className="case-study__hero-image"
             style={{
               maxWidth: '360px',
@@ -146,30 +146,30 @@ const EarlyDrop = () => {
           <h2 className="section-title">Design Process</h2>
 
           <div className="design-process-grid">
-            {/* Homepage/Login */}
+            {/* Homepage/Login (LoFi) */}
             <div className="design-card">
-              <h3 className="section-subtitle">Login & Onboarding</h3>
+              <h3 className="section-subtitle">Login & Onboarding (Lo-Fi)</h3>
               <p className="section-text">
                 Simple login and account creation flow to get users into the app quickly. Minimal friction
                 to start browsing new releases immediately.
               </p>
               <img
-                src="/images/earlydrop-homepage.png"
-                alt="EarlyDrop login screen"
+                src="/images/earlydropLoFi.png"
+                alt="EarlyDrop low-fidelity login and home wireframes"
                 className="case-study__image design-card-image"
               />
             </div>
 
-            {/* Pre-Order Page */}
+            {/* Featured Pre-Orders (HiFi) */}
             <div className="design-card">
-              <h3 className="section-subtitle">Featured Pre-Orders</h3>
+              <h3 className="section-subtitle">Featured Pre-Orders (Hi-Fi)</h3>
               <p className="section-text">
                 Curated homepage showcasing new releases with album art, artist info, and prominent reward
                 points display. One-tap access to pre-order or stream.
               </p>
               <img
-                src="/images/earlydrop-preorder.png"
-                alt="EarlyDrop pre-order page"
+                src="/images/earlydropHiFi.png"
+                alt="EarlyDrop high-fidelity featured pre-order screen"
                 className="case-study__image design-card-image"
               />
             </div>
@@ -257,10 +257,10 @@ const EarlyDrop = () => {
                 <strong>Clear navigation:</strong> Users easily browsed, searched, and added items to cart without confusion.
               </li>
               <li>
-                <strong>Reward visibility:</strong> Prominent reward points display increased user engagement and repeat intent.
+                <strong>Reward visibility:</strong> Prominent reward points display increased engagement and repeat intent.
               </li>
               <li>
-                <strong>High satisfaction:</strong> 80% of participants rated the app "easy to use" on the System Usability Scale.
+                <strong>High satisfaction:</strong> Most participants rated the app as easy and enjoyable to use.
               </li>
             </ul>
           </div>
@@ -273,9 +273,9 @@ const EarlyDrop = () => {
           <div className="next-steps-card">
             <h2 className="section-title">Next Steps</h2>
             <ul className="next-steps-list">
-              <li>Refine UI based on 2025 design trends and accessibility standards.</li>
-              <li>Add social sharing features to let users share new discoveries with friends.</li>
-              <li>Integrate artist profiles and exclusive content (interviews, behind-the-scenes).</li>
+              <li>Refine UI based on updated design trends and accessibility standards.</li>
+              <li>Add social sharing features so users can share new discoveries with friends.</li>
+              <li>Integrate artist profiles and exclusive content such as interviews and behind-the-scenes.</li>
               <li>Build partnerships with indie labels for exclusive early drops.</li>
             </ul>
           </div>
@@ -287,7 +287,10 @@ const EarlyDrop = () => {
         <Link to="/#projects" className="back-btn">
           <FontAwesomeIcon icon={faArrowLeft} /> Back to Projects
         </Link>
-        <button onClick={() => window.scrollTo({ top: 0, behavior: 'smooth' })} className="back-btn">
+        <button
+          onClick={() => window.scrollTo({ top: 0, behavior: 'smooth' })}
+          className="back-btn"
+        >
           <FontAwesomeIcon icon={faArrowLeft} style={{ transform: 'rotate(90deg)' }} /> Back to Top
         </button>
       </div>
