@@ -2087,3 +2087,22 @@ body:not(.dark-theme) .modal__right .form__submit {
 .project-block--ux .project-image-container.placeholder::before {
   content: "🎵 Mockups Coming Soon";
 }
+
+/* EarlyDrop case study cards – inner padding */
+.case-study .design-card {
+  padding: 2rem 2rem 2.5rem;
+}
+
+/* Make all images inside design cards consistent */
+.case-study .design-card-image {
+  display: block;
+  max-width: 320px;   /* was 260px */
+  width: 100%;
+  margin: 1.5rem auto 0;
+}
+
+.case-study .design-process-grid {
+  padding: 0 2rem;    /* left/right padding for the whole row */
+  gap: 1.75rem;       /* optional: space between cards */
+}
+
