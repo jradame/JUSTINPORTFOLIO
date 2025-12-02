@@ -28,7 +28,7 @@ const EarlyDrop = () => {
             Stream and pre-order new music before it officially drops
           </p>
           <img
-            src="/images/earlydropHiFi.png"
+            src="/images/edhificlear.png"
             alt="EarlyDrop high-fidelity mockup"
             className="case-study__hero-image"
             style={{
@@ -154,7 +154,7 @@ const EarlyDrop = () => {
                 to start browsing new releases immediately.
               </p>
               <img
-                src="/images/earlydropLoFi.png"
+                src="/images/edloficlear.png"
                 alt="EarlyDrop low-fidelity login and home wireframes"
                 className="case-study__image design-card-image"
               />
@@ -168,7 +168,7 @@ const EarlyDrop = () => {
                 points display. One-tap access to pre-order or stream.
               </p>
               <img
-                src="/images/edhifi2.png"
+                src="/images/edhificlear.png"
                 alt="EarlyDrop high-fidelity featured pre-order screen"
                 className="case-study__image design-card-image"
               />
@@ -182,7 +182,7 @@ const EarlyDrop = () => {
                 navigation back to browsing.
               </p>
               <img
-                src="/images/searchhifi1.png"
+                src="/images/searchhifi1clear.png"
                 alt="EarlyDrop high-fidelity search results screen"
                 className="case-study__image design-card-image"
               />
@@ -196,7 +196,7 @@ const EarlyDrop = () => {
                 reduces abandonment and confirms purchase instantly.
               </p>
               <img
-                src="/images/orderconfirm.png"
+                src="/images/orderconfirmclear.png"
                 alt="EarlyDrop order confirmation screen"
                 className="case-study__image design-card-image"
               />

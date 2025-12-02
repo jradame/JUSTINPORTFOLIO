@@ -2096,7 +2096,7 @@ body:not(.dark-theme) .modal__right .form__submit {
 /* Make all images inside design cards consistent */
 .case-study .design-card-image {
   display: block;
-  max-width: 320px;   /* was 260px */
+  max-width: 320px;   
   width: 100%;
   margin: 1.5rem auto 0;
 }
@@ -2105,4 +2105,72 @@ body:not(.dark-theme) .modal__right .form__submit {
   padding: 0 2rem;    /* left/right padding for the whole row */
   gap: 1.75rem;       /* optional: space between cards */
 }
+
+.case-study .design-card {
+  background-color: #0d213e;
+}
+
+/* Light mode: make EarlyDrop card text white */
+body:not(.dark-theme) .case-study .design-card {
+  color: #ffffff;
+}
+
+body:not(.dark-theme) .case-study .design-card h3,
+body:not(.dark-theme) .case-study .design-card p,
+body:not(.dark-theme) .case-study .design-card li,
+body:not(.dark-theme) .case-study .design-card span {
+  color: #ffffff;
+}
+
+/* Light mode: EarlyDrop cards use light style */
+body:not(.dark-theme) .case-study .design-card {
+  background-color: #ffffff;
+  color: #0f172a;
+  box-shadow: 0 18px 45px rgba(15, 23, 42, 0.08);
+}
+
+/* Light mode: headings and body text */
+body:not(.dark-theme) .case-study .design-card h3,
+body:not(.dark-theme) .case-study .design-card p,
+body:not(.dark-theme) .case-study .design-card li,
+body:not(.dark-theme) .case-study .design-card span {
+  color: #0f172a;
+}
+
+/* Grid so all cards behave the same */
+.case-study .design-process-grid {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: 1.75rem;
+}
+
+/* Card shell: same width + height */
+.case-study .design-card {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  min-height: 520px;      /* tweak until all feel even */
+  padding: 2rem 2rem 2.5rem;
+  border-radius: 24px;
+}
+
+/* Inner content uses same spacing */
+.case-study .design-card__body {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  gap: 1rem;
+}
+
+/* Images inside cards share same size */
+.case-study .design-card-image {
+  display: block;
+  max-width: 340px;
+  width: 100%;
+  margin: 1.5rem auto 0;
+}
+
+
+
 
