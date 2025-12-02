@@ -28,7 +28,7 @@ const EarlyDrop = () => {
             Stream and pre-order new music before it officially drops
           </p>
           <img
-            src="/images/edhificlear.png"
+            src="/images/edhificlear2.png"
             alt="EarlyDrop high-fidelity mockup"
             className="case-study__hero-image"
             style={{
@@ -155,7 +155,7 @@ const EarlyDrop = () => {
                   Minimal friction to start browsing new releases immediately.
                 </p>
                 <img
-                  src="/images/edloficlear.png"
+                  src="/images/edloficlear2.png"
                   alt="EarlyDrop low-fidelity login and home wireframes"
                   className="case-study__image design-card-image"
                 />
@@ -171,7 +171,7 @@ const EarlyDrop = () => {
                   and prominent reward points display. One-tap access to pre-order or stream.
                 </p>
                 <img
-                  src="/images/edhificlear.png"
+                  src="/images/edhificlear2.png"
                   alt="EarlyDrop high-fidelity featured pre-order screen"
                   className="case-study__image design-card-image"
                 />
@@ -187,7 +187,7 @@ const EarlyDrop = () => {
                   Easy navigation back to browsing.
                 </p>
                 <img
-                  src="/images/searchhifi1clear.png"
+                  src="/images/searchhifi1clear1.png"
                   alt="EarlyDrop high-fidelity search results screen"
                   className="case-study__image design-card-image"
                 />
@@ -203,7 +203,7 @@ const EarlyDrop = () => {
                   Streamlined flow reduces abandonment and confirms purchase instantly.
                 </p>
                 <img
-                  src="/images/orderconfirmclear.png"
+                  src="/images/orderconfirmclear2 11.png"
                   alt="EarlyDrop order confirmation screen"
                   className="case-study__image design-card-image design-card-image--rounded"
                 />
