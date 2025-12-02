@@ -11,7 +11,7 @@ const EarlyDrop = () => {
   }, []);
 
   return (
-    <div className="case-study">
+    <div className="case-study case-study--earlydrop">
       {/* Back Button */}
       <div className="case-study__back">
         <Link to="/#projects" className="back-btn">
@@ -146,61 +146,69 @@ const EarlyDrop = () => {
           <h2 className="section-title">Design Process</h2>
 
           <div className="design-process-grid">
-            {/* Homepage/Login (LoFi) */}
-            <div className="design-card">
-              <h3 className="section-subtitle">Login & Onboarding (Lo-Fi)</h3>
-              <p className="section-text">
-                Simple login and account creation flow to get users into the app quickly. Minimal friction
-                to start browsing new releases immediately.
-              </p>
-              <img
-                src="/images/edloficlear.png"
-                alt="EarlyDrop low-fidelity login and home wireframes"
-                className="case-study__image design-card-image"
-              />
-            </div>
+            {/* Login & Onboarding (Lo-Fi) */}
+            <article className="design-card">
+              <div className="design-card__body">
+                <h3 className="section-subtitle">Login & Onboarding (Lo-Fi)</h3>
+                <p className="section-text">
+                  Simple login and account creation flow to get users into the app quickly.
+                  Minimal friction to start browsing new releases immediately.
+                </p>
+                <img
+                  src="/images/edloficlear.png"
+                  alt="EarlyDrop low-fidelity login and home wireframes"
+                  className="case-study__image design-card-image"
+                />
+              </div>
+            </article>
 
-            {/* Featured Pre-Orders (HiFi) */}
-            <div className="design-card">
-              <h3 className="section-subtitle">Featured Pre-Orders (Hi-Fi)</h3>
-              <p className="section-text">
-                Curated homepage showcasing new releases with album art, artist info, and prominent reward
-                points display. One-tap access to pre-order or stream.
-              </p>
-              <img
-                src="/images/edhificlear.png"
-                alt="EarlyDrop high-fidelity featured pre-order screen"
-                className="case-study__image design-card-image"
-              />
-            </div>
+            {/* Featured Pre-Orders (Hi-Fi) */}
+            <article className="design-card">
+              <div className="design-card__body">
+                <h3 className="section-subtitle">Featured Pre-Orders (Hi-Fi)</h3>
+                <p className="section-text">
+                  Curated homepage showcasing new releases with album art, artist info,
+                  and prominent reward points display. One-tap access to pre-order or stream.
+                </p>
+                <img
+                  src="/images/edhificlear.png"
+                  alt="EarlyDrop high-fidelity featured pre-order screen"
+                  className="case-study__image design-card-image"
+                />
+              </div>
+            </article>
 
-            {/* Search Results */}
-            <div className="design-card">
-              <h3 className="section-subtitle">Search & Discovery</h3>
-              <p className="section-text">
-                Fast search with clear album cards, descriptions, and quick access to pre-order. Easy
-                navigation back to browsing.
-              </p>
-              <img
-                src="/images/searchhifi1clear.png"
-                alt="EarlyDrop high-fidelity search results screen"
-                className="case-study__image design-card-image"
-              />
-            </div>
+            {/* Search & Discovery */}
+            <article className="design-card">
+              <div className="design-card__body">
+                <h3 className="section-subtitle">Search & Discovery</h3>
+                <p className="section-text">
+                  Fast search with clear album cards, descriptions, and quick access to pre-order.
+                  Easy navigation back to browsing.
+                </p>
+                <img
+                  src="/images/searchhifi1clear.png"
+                  alt="EarlyDrop high-fidelity search results screen"
+                  className="case-study__image design-card-image"
+                />
+              </div>
+            </article>
 
             {/* Order Confirmation */}
-            <div className="design-card">
-              <h3 className="section-subtitle">Order Confirmation</h3>
-              <p className="section-text">
-                Clean checkout with order summary, total, and reward points earned. Streamlined flow
-                reduces abandonment and confirms purchase instantly.
-              </p>
-              <img
-                src="/images/orderconfirmclear.png"
-                alt="EarlyDrop order confirmation screen"
-                className="case-study__image design-card-image"
-              />
-            </div>
+            <article className="design-card">
+              <div className="design-card__body">
+                <h3 className="section-subtitle">Order Confirmation</h3>
+                <p className="section-text">
+                  Clean checkout with order summary, total, and reward points earned.
+                  Streamlined flow reduces abandonment and confirms purchase instantly.
+                </p>
+                <img
+                  src="/images/orderconfirmclear.png"
+                  alt="EarlyDrop order confirmation screen"
+                  className="case-study__image design-card-image design-card-image--rounded"
+                />
+              </div>
+            </article>
           </div>
         </section>
       </ScrollReveal>

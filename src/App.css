@@ -2171,6 +2171,34 @@ body:not(.dark-theme) .case-study .design-card span {
   margin: 1.5rem auto 0;
 }
 
+/* TipTrack ONLY – Design Process layout */
+.case-study:not(.case-study--earlydrop) .case-study__section .design-process-grid {
+  display: flex;
+  justify-content: center;
+  gap: 2rem;
+  max-width: 960px;
+  margin: 0 auto;
+}
+
+/* TipTrack ONLY – Design Process cards */
+.case-study:not(.case-study--earlydrop) .case-study__section .design-process-grid .design-card {
+  flex: 1 1 0;
+  max-width: 420px;     /* adjust narrower if needed */
+  min-height: 520px;    /* lower to make them shorter */
+  padding: 2rem 2rem 2.5rem;
+  border-radius: 24px;
+  display: flex;
+  flex-direction: column;
+}
+
+/* TipTrack ONLY – image sizing inside those cards */
+.case-study:not(.case-study--earlydrop) .case-study__section .design-process-grid .design-card img {
+  margin-top: 1.5rem;
+  align-self: center;
+  max-width: 260px;
+  width: 100%;
+}
+
 
 
 
