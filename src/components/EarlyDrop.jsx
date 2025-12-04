@@ -12,14 +12,12 @@ const EarlyDrop = () => {
 
   return (
     <div className="case-study case-study--earlydrop">
-      {/* Back Button */}
       <div className="case-study__back">
         <Link to="/#projects" className="back-btn">
           <FontAwesomeIcon icon={faArrowLeft} /> Back to Projects
         </Link>
       </div>
 
-      {/* Hero Section */}
       <ScrollReveal direction="up">
         <section className="case-study__hero">
           <h1 className="case-study__title">EarlyDrop</h1>
@@ -28,7 +26,7 @@ const EarlyDrop = () => {
             Stream and pre-order new music before it officially drops
           </p>
           <img
-            src="/images/edhificlear2.png"
+            src="/images/edhificlear1.png"
             alt="EarlyDrop high-fidelity mockup"
             className="case-study__hero-image"
             style={{
@@ -48,12 +46,11 @@ const EarlyDrop = () => {
               fontSize: '1.1rem',
             }}
           >
-            UX Case Study &nbsp; | &nbsp; Justin Adame
+            UX Case Study   |   Justin Adame
           </div>
         </section>
       </ScrollReveal>
 
-      {/* Project Overview */}
       <ScrollReveal direction="up">
         <section className="case-study__overview">
           <h2 className="section-title">Project Overview</h2>
@@ -92,11 +89,9 @@ const EarlyDrop = () => {
         </section>
       </ScrollReveal>
 
-      {/* Problem & Solution */}
       <ScrollReveal direction="up" delay={100}>
         <section className="case-study__section">
           <h2 className="section-title">The Challenge</h2>
-
           <div className="case-study__problem-solution">
             <div className="ps-card ps-card--problem">
               <h3 className="section-subtitle">The Problem</h3>
@@ -107,7 +102,6 @@ const EarlyDrop = () => {
                 albums.
               </p>
             </div>
-
             <div className="ps-card ps-card--solution">
               <h3 className="section-subtitle">The Solution</h3>
               <p className="section-text">
@@ -120,7 +114,6 @@ const EarlyDrop = () => {
         </section>
       </ScrollReveal>
 
-      {/* User Research */}
       <ScrollReveal direction="up" delay={100}>
         <section className="case-study__section">
           <h2 className="section-title">User Research</h2>
@@ -140,61 +133,57 @@ const EarlyDrop = () => {
         </section>
       </ScrollReveal>
 
-      {/* Design Process – Screens */}
       <ScrollReveal direction="up" delay={100}>
         <section className="case-study__section">
           <h2 className="section-title">Design Process</h2>
-
           <div className="design-process-grid">
-            {/* Login & Onboarding (Lo-Fi) */}
             <article className="design-card">
               <div className="design-card__body">
-                <h3 className="section-subtitle">Login & Onboarding (Lo-Fi)</h3>
+                <h3 className="section-subtitle">Login & Onboarding<br />(Lo-Fi)</h3>
                 <p className="section-text">
                   Simple login and account creation flow to get users into the app quickly.
                   Minimal friction to start browsing new releases immediately.
                 </p>
                 <img
-                  src="/images/edloficlear2.png"
+                  src="/images/lofisketch.png"
                   alt="EarlyDrop low-fidelity login and home wireframes"
                   className="case-study__image design-card-image"
                 />
               </div>
             </article>
-
-            {/* Featured Pre-Orders (Hi-Fi) */}
             <article className="design-card">
               <div className="design-card__body">
-                <h3 className="section-subtitle">Featured Pre-Orders (Hi-Fi)</h3>
+                <h3 className="section-subtitle">Featured Pre-Orders<br />(Hi-Fi)</h3>
                 <p className="section-text">
                   Curated homepage showcasing new releases with album art, artist info,
                   and prominent reward points display. One-tap access to pre-order or stream.
                 </p>
                 <img
-                  src="/images/edhificlear2.png"
+                  src="/images/featured.png"
                   alt="EarlyDrop high-fidelity featured pre-order screen"
                   className="case-study__image design-card-image"
                 />
               </div>
             </article>
-
             {/* Search & Discovery */}
-            <article className="design-card">
-              <div className="design-card__body">
-                <h3 className="section-subtitle">Search & Discovery</h3>
-                <p className="section-text">
-                  Fast search with clear album cards, descriptions, and quick access to pre-order.
-                  Easy navigation back to browsing.
-                </p>
-                <img
-                  src="/images/searchhifi1clear1.png"
-                  alt="EarlyDrop high-fidelity search results screen"
-                  className="case-study__image design-card-image"
-                />
-              </div>
-            </article>
+<article className="design-card">
+  <div className="design-card__body">
+    <h3 className="section-subtitle">Search & Discovery</h3>
+    <p
+      className="section-text"
+      style={{ marginTop: '-3.5rem' }}   // adjust between -0.5rem and -1rem
+    >
+      Fast search with clear album cards, descriptions, and quick access to pre-order.
+      Easy navigation back to browsing.
+    </p>
+    <img
+      src="/images/searchscreen.png"
+      alt="EarlyDrop high-fidelity search results screen"
+      className="case-study__image design-card-image"
+    />
+  </div>
+</article>
 
-            {/* Order Confirmation */}
             <article className="design-card">
               <div className="design-card__body">
                 <h3 className="section-subtitle">Order Confirmation</h3>
@@ -203,7 +192,7 @@ const EarlyDrop = () => {
                   Streamlined flow reduces abandonment and confirms purchase instantly.
                 </p>
                 <img
-                  src="/images/orderconfirmclear2 11.png"
+                  src="/images/orderconfirmed.png"
                   alt="EarlyDrop order confirmation screen"
                   className="case-study__image design-card-image design-card-image--rounded"
                 />
@@ -213,7 +202,6 @@ const EarlyDrop = () => {
         </section>
       </ScrollReveal>
 
-      {/* Key Features */}
       <ScrollReveal direction="up" delay={100}>
         <section className="case-study__section">
           <h2 className="section-title">Key Features</h2>
@@ -250,11 +238,9 @@ const EarlyDrop = () => {
         </section>
       </ScrollReveal>
 
-      {/* Impact & Results */}
       <ScrollReveal direction="up" delay={100}>
         <section className="case-study__section">
           <h2 className="section-title">Impact & Results</h2>
-
           <div className="impact-card">
             <h3 className="section-subtitle">Usability Study Findings</h3>
             <ul className="impact-list">
@@ -275,7 +261,6 @@ const EarlyDrop = () => {
         </section>
       </ScrollReveal>
 
-      {/* Next Steps */}
       <ScrollReveal direction="up" delay={100}>
         <section className="case-study__section">
           <div className="next-steps-card">
@@ -290,7 +275,6 @@ const EarlyDrop = () => {
         </section>
       </ScrollReveal>
 
-      {/* Bottom Navigation */}
       <div className="case-study__bottom-nav">
         <Link to="/#projects" className="back-btn">
           <FontAwesomeIcon icon={faArrowLeft} /> Back to Projects
@@ -303,7 +287,6 @@ const EarlyDrop = () => {
         </button>
       </div>
 
-      {/* Footer */}
       <Footer loading={false} toggleModal={() => {}} />
     </div>
   );
