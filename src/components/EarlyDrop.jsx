@@ -177,7 +177,7 @@ const EarlyDrop = () => {
       Easy navigation back to browsing.
     </p>
     <img
-      src="/images/searchscreen.png"
+      src="/images/search.png"
       alt="EarlyDrop high-fidelity search results screen"
       className="case-study__image design-card-image"
     />
@@ -192,7 +192,7 @@ const EarlyDrop = () => {
                   Streamlined flow reduces abandonment and confirms purchase instantly.
                 </p>
                 <img
-                  src="/images/orderconfirmed.png"
+                  src="/images/confirm.png"
                   alt="EarlyDrop order confirmation screen"
                   className="case-study__image design-card-image design-card-image--rounded"
                 />
