@@ -173,7 +173,7 @@ const TipTrack = () => {
                 <li>Compared tab vs. bottom navigation for faster access to key screens.</li>
               </ul>
               <img
-                src="/images/lofiwireframe1.png"
+                src="/images/lofitipframe.png"
                 alt="TipTrack low-fidelity wireframes"
                 className="case-study__image design-card-image"
               />

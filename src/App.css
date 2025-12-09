@@ -1632,6 +1632,8 @@ body:not(.dark-theme) .case-study--earlydrop .design-card span {
   color: #0f172a;
 }
 
+
+
 /* Nudge Search & Discovery text up (3rd card) */
 .case-study--earlydrop .design-process-grid .design-card:nth-child(3) .section-text {
   margin-top: -0.75rem;  /* tweak between -0.5rem and -1rem as needed */
@@ -2124,4 +2126,53 @@ body:not(.dark-theme) .case-study--earlydrop .design-card span {
   background: var(--border-color);
   border-radius: 4px;
 }
+
+/* TipTrack Design Process – ONLY TipTrack (EarlyDrop untouched) */
+.case-study:not(.case-study--earlydrop) .case-study__section .design-process-grid {
+  display: flex;
+  gap: 2rem;
+  justify-content: center;
+  margin: 0 auto;
+  max-width: 960px;
+}
+
+.case-study:not(.case-study--earlydrop) .case-study__section .design-process-grid .design-card {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  flex: 1 1 0;
+  max-width: 420px;
+  min-height: 520px;
+  border-radius: 24px;
+  padding: 2rem 2.5rem 2.5rem;
+}
+
+/* TipTrack headings + text spacing */
+.case-study:not(.case-study--earlydrop) .design-card .section-subtitle {
+  margin-bottom: 0.5rem;
+}
+
+.case-study:not(.case-study--earlydrop) .design-card .section-text {
+  margin-bottom: 0.75rem;
+}
+
+/* TipTrack design list */
+.case-study:not(.case-study--earlydrop) .design-card .design-list {
+  margin: 0 0 1rem 1.2rem;
+  padding: 0;
+}
+
+/* TipTrack mockup images inside the SAME card */
+.case-study:not(.case-study--earlydrop) .design-card .design-card-image {
+  display: block;
+  width: 100%;
+  max-width: 260px;
+  height: 360px;
+  margin: 1.5rem auto 0;
+  object-fit: contain;
+  background: transparent;
+  border: none;
+  box-shadow: none;
+}
+
 
