@@ -1593,14 +1593,21 @@ body:not(.dark-theme) .modal__right .input::placeholder {
 .case-study--earlydrop .design-card__body .section-subtitle {
   display: flex;
   align-items: center;
+  justify-content: center;
+  text-align: center;
   min-height: 3rem;
 }
+
 
 .case-study--earlydrop .design-card__body .section-text {
   display: flex;
   flex: 1;
   min-height: 6rem;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
 }
+
 
 .case-study--earlydrop .design-card-image {
   display: block;
