@@ -28,7 +28,7 @@ const EarlyDrop = () => {
             Stream and pre-order new music before it officially drops
           </p>
           <img
-            src="/images/edhificlear1.png"
+            src="/images/featured.png"
             alt="EarlyDrop high-fidelity mockup"
             className="case-study__hero-image"
             style={{

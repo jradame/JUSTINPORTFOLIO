@@ -69,7 +69,7 @@ const uxProjects = [
   {
     title: 'EarlyDrop 🎵',
     description: 'Music pre-order app helping fans stream and order new releases early. Includes usability testing, user research, and high-fidelity prototypes.',
-    imageUrl: 'placeholder',
+    imageUrl: '/images/featured.png',
     projectUrl: '/projects/earlydrop',
     technologies: ['UX Research', 'Figma', 'Usability Testing', 'Prototyping'],
     category: 'UX Design',
