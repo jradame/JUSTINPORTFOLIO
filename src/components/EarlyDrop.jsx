@@ -125,7 +125,7 @@ const EarlyDrop = () => {
         </section>
       </ScrollReveal>
 
-      {/* Design Process – Lo‑Fi & Hi‑Fi Cards (Aligned) */}
+      {/* Design Process */}
       <ScrollReveal direction="up" delay={100}>
         <section className="case-study__section">
           <h2 className="section-title">Design Process</h2>
@@ -233,10 +233,9 @@ const EarlyDrop = () => {
       {/* Impact & Results */}
       <ScrollReveal direction="up" delay={100}>
         <section className="case-study__section">
-          <h2 className="section-title">Impact & Results</h2>
-          <div className="impact-card">
-            <h3 className="section-subtitle">Usability Study Findings</h3>
-            <ul className="impact-list">
+          <div className="case-study-card">
+            <h2>Usability Study Findings</h2>
+            <ul>
               <li><strong>Simplified checkout:</strong> Participants completed orders in under 2 minutes with minimal errors.</li>
               <li><strong>Clear navigation:</strong> Users easily browsed, searched, and added items to cart without confusion.</li>
               <li><strong>Reward visibility:</strong> Prominent reward points display increased engagement and repeat intent.</li>
@@ -249,9 +248,9 @@ const EarlyDrop = () => {
       {/* Next Steps */}
       <ScrollReveal direction="up" delay={100}>
         <section className="case-study__section">
-          <div className="next-steps-card">
-            <h2 className="section-title">Next Steps</h2>
-            <ul className="next-steps-list">
+          <div className="case-study-card">
+            <h2>Next Steps</h2>
+            <ul>
               <li>Refine UI based on updated design trends and accessibility standards.</li>
               <li>Add social sharing features so users can share new discoveries with friends.</li>
               <li>Integrate artist profiles and exclusive content such as interviews and behind‑the‑scenes.</li>
