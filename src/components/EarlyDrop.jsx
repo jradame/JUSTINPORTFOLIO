@@ -107,23 +107,25 @@ const EarlyDrop = () => {
       </ScrollReveal>
 
       {/* User Research */}
-      <ScrollReveal direction="up" delay={100}>
-        <section className="case-study__section">
-          <h2 className="section-title">User Research</h2>
-          <div className="research-card">
-            <h3 className="section-subtitle">Research Methodology</h3>
-            <p className="section-text">
-              Conducted an unmoderated usability study with 5 participants (ages 18–35) who attend 2+ live music events weekly. Sessions focused on browsing, ordering, and checkout flows.
-            </p>
-            <ul className="research-list">
-              <li><strong>Method:</strong> Unmoderated usability testing (remote)</li>
-              <li><strong>Participants:</strong> 3 males, 2 females, all service industry workers</li>
-              <li><strong>Duration:</strong> 10–15 minute sessions + questionnaire</li>
-              <li><strong>Key Metrics:</strong> Time on task, error rates, conversion rates</li>
-            </ul>
-          </div>
-        </section>
-      </ScrollReveal>
+<ScrollReveal direction="up" delay={100}>
+  <section className="case-study__section">
+    <h2 className="section-title">User Research</h2>
+    <div className="case-study-card research-card--full">
+      <h3 className="section-subtitle">Research Methodology</h3>
+      <p className="section-text">
+        Conducted an unmoderated usability study with 5 participants (ages 18–35) who attend 2+ live music events weekly.
+        Sessions focused on browsing, ordering, and checkout flows.
+      </p>
+      <ul className="research-list-even">
+        <li><strong>Method:</strong> Unmoderated usability testing (remote)</li>
+        <li><strong>Participants:</strong> 3 males, 2 females, all service industry workers</li>
+        <li><strong>Duration:</strong> 10–15 minute sessions + questionnaire</li>
+        <li><strong>Key Metrics:</strong> Time on task, error rates, conversion rates</li>
+      </ul>
+    </div>
+  </section>
+</ScrollReveal>
+
 
       {/* Design Process */}
       <ScrollReveal direction="up" delay={100}>
