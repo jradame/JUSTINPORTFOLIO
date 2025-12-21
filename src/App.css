@@ -1481,8 +1481,8 @@ body:not(.dark-theme) .modal__right .input::placeholder {
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
-  gap: 1.5rem;
-  margin-top: 1.5rem;
+  gap: 2.5rem; /* Increased from 1.5rem */
+  margin-top: 2.5rem; /* Increased from 1.5rem */
 }
 
 /* Base Design Card */
@@ -1490,10 +1490,10 @@ body:not(.dark-theme) .modal__right .input::placeholder {
   background: var(--bg-secondary);
   border-radius: 16px;
   box-shadow: 0 4px 24px rgba(0, 0, 0, 0.09);
-  padding: 1.8rem 1.5rem 1.6rem;
+  padding: 2rem 1.75rem 1.8rem; /* Increased padding */
   display: flex;
   flex-direction: column;
-  gap: 0.9rem;
+  gap: 1.25rem; /* Increased from 0.9rem */
   max-width: 460px;
   transition: transform 0.25s cubic-bezier(0.24, 0.81, 0.47, 1.2),
               box-shadow 0.25s;
@@ -1511,7 +1511,7 @@ body:not(.dark-theme) .modal__right .input::placeholder {
 .design-list {
   color: var(--text-primary);
   font-size: 0.96rem;
-  margin: 0.4rem 0 0.4rem 1.2rem;
+  margin: 0.6rem 0 0.6rem 1.2rem; /* Slightly more vertical spacing */
   padding: 0;
 }
 
@@ -1523,7 +1523,9 @@ body:not(.dark-theme) .modal__right .input::placeholder {
   object-fit: contain;
   object-position: center;
   width: 100%;
+  margin-top: 0.5rem; /* Add space before image */
 }
+
 
 /* ============ NON-EARLYDROP (DEFAULT) ============ */
 .case-study:not(.case-study--earlydrop) .case-study__section .design-process-grid {
@@ -2090,3 +2092,200 @@ body:not(.dark-theme) .case-study--earlydrop .design-card span {
     padding: 0 1rem;
   }
 }
+
+/* Key Outcomes Section */
+.outcomes-section {
+  background: var(--bg-secondary);
+  border-radius: 16px;
+  padding: 2.5rem 2rem;
+  max-width: 900px;
+  margin: 2rem auto;
+}
+
+.outcomes-list {
+  list-style: none;
+  padding: 0;
+  margin: 1.5rem 0 0 0;
+  display: flex;
+  flex-direction: column;
+  gap: 1.25rem;
+}
+
+.outcomes-list li {
+  padding: 1.25rem 1.5rem;
+  background: rgba(52, 211, 153, 0.08);
+  border-left: 4px solid var(--primary);
+  border-radius: 8px;
+  line-height: 1.7;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.outcomes-list li:hover {
+  transform: translateX(8px);
+  box-shadow: 0 4px 16px rgba(52, 211, 153, 0.15);
+}
+
+.outcomes-list strong {
+  color: var(--primary);
+  font-weight: 700;
+  font-size: 1.05rem;
+}
+
+/* Download Card & Next Steps Card */
+.download-card,
+.next-steps-card {
+  background: var(--bg-secondary);
+  border-radius: 16px;
+  padding: 2.5rem 2rem;
+  max-width: 800px;
+  margin: 2rem auto;
+  text-align: center;
+}
+
+.download-card {
+  border: 2px solid var(--primary);
+}
+
+.download-description {
+  color: var(--text-primary);
+  font-size: 1rem;
+  line-height: 1.7;
+  margin: 1rem auto 1.5rem;
+  max-width: 700px;
+}
+
+.download-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.6rem;
+  font-size: 1rem;
+  font-weight: 600;
+  padding: 0.9rem 1.8rem;
+  color: #fff;
+  background: var(--primary);
+  border-radius: 8px;
+  text-decoration: none;
+  transition: background 0.25s ease, transform 0.2s ease;
+}
+
+.download-btn:hover {
+  background: #059669;
+  transform: translateY(-2px);
+  box-shadow: 0 4px 18px rgba(52, 211, 153, 0.4);
+}
+
+.download-btn svg {
+  font-size: 1.1rem;
+}
+
+/* Next Steps Styling */
+.next-steps-card {
+  text-align: left;
+}
+
+.next-steps-list {
+  list-style: none;
+  padding: 0;
+  margin: 1.5rem 0 0 0;
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.next-steps-list li {
+  padding: 1rem 1.25rem 1rem 3rem;
+  background: rgba(255, 255, 255, 0.03);
+  border-left: 3px solid var(--primary);
+  border-radius: 8px;
+  line-height: 1.7;
+  position: relative;
+  transition: transform 0.2s ease, background 0.2s ease;
+}
+
+.next-steps-list li:hover {
+  background: rgba(255, 255, 255, 0.06);
+  transform: translateX(6px);
+}
+
+.next-steps-list li::before {
+  content: "→";
+  position: absolute;
+  left: 1rem;
+  color: var(--primary);
+  font-weight: 700;
+  font-size: 1.2rem;
+}
+
+/* Section Spacing */
+.case-study__section {
+  margin-bottom: 4rem;
+}
+
+.case-study__section:last-of-type {
+  margin-bottom: 2rem;
+}
+
+/* Specific section spacing adjustments */
+.case-study__hero {
+  margin-bottom: 4rem;
+}
+
+.case-study__overview {
+  margin-bottom: 4rem;
+}
+
+.case-study__slides {
+  margin-bottom: 4rem;
+}
+
+/* Responsive spacing - tighter on mobile */
+@media (max-width: 768px) {
+  .case-study__section {
+    margin-bottom: 3rem;
+  }
+  
+  .case-study__hero,
+  .case-study__overview,
+  .case-study__slides {
+    margin-bottom: 3rem;
+  }
+}
+
+/* CONSISTENT SECTION SPACING - Apply to all sections */
+.case-study__hero,
+.case-study__overview,
+.case-study__slides,
+.case-study__section {
+  margin-bottom: 5rem; /* 80px consistent spacing */
+}
+
+/* Section titles - consistent top spacing */
+.section-title {
+  margin-bottom: 2.5rem; /* Space below title */
+  margin-top: 0;
+}
+
+/* Design Process Grid - match the spacing */
+.design-process-grid {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 2.5rem;
+  margin-top: 0; /* Remove extra margin, let section-title handle it */
+}
+
+/* Mobile - reduce spacing */
+@media (max-width: 768px) {
+  .case-study__hero,
+  .case-study__overview,
+  .case-study__slides,
+  .case-study__section {
+    margin-bottom: 3.5rem;
+  }
+  
+  .section-title {
+    margin-bottom: 2rem;
+  }
+}
+
+

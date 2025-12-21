@@ -5,10 +5,12 @@ import { Link } from 'react-router-dom';
 import ScrollReveal from './ScrollReveal';
 import Footer from '../components/Footer';
 
+
 const TipTrack = () => {
   useEffect(() => {
     window.scrollTo(0, 0);
   }, []);
+
 
   return (
     <div className="case-study">
@@ -19,6 +21,7 @@ const TipTrack = () => {
         </Link>
       </div>
 
+
       {/* Hero Section */}
       <ScrollReveal direction="up">
         <section className="case-study__hero">
@@ -27,6 +30,7 @@ const TipTrack = () => {
           <p className="case-study__tagline">
             Helping bartenders track tips and take control of their finances
           </p>
+
 
           <img
             src="/images/tiptrack-preview.png"
@@ -42,6 +46,7 @@ const TipTrack = () => {
             }}
           />
 
+
           <div
             style={{
               marginTop: '1.5rem',
@@ -54,6 +59,7 @@ const TipTrack = () => {
           </div>
         </section>
       </ScrollReveal>
+
 
       {/* Project Overview */}
       <ScrollReveal direction="up">
@@ -68,6 +74,7 @@ const TipTrack = () => {
               <div className="overview-card-content">UX Designer</div>
             </div>
 
+
             <div className="overview-card">
               <div className="overview-card-icon" role="img" aria-label="Duration">
                 ⏳
@@ -75,6 +82,7 @@ const TipTrack = () => {
               <div className="overview-card-title">Duration</div>
               <div className="overview-card-content">4 weeks</div>
             </div>
+
 
             <div className="overview-card">
               <div className="overview-card-icon" role="img" aria-label="Tools">
@@ -88,6 +96,7 @@ const TipTrack = () => {
               </div>
             </div>
 
+
             <div className="overview-card">
               <div className="overview-card-icon" role="img" aria-label="Platform">
                 📱
@@ -98,6 +107,7 @@ const TipTrack = () => {
           </div>
         </section>
       </ScrollReveal>
+
 
       {/* Embedded Google Slides */}
       <ScrollReveal direction="up" delay={100}>
@@ -138,6 +148,7 @@ const TipTrack = () => {
         </section>
       </ScrollReveal>
 
+
       {/* Problem & Solution */}
       <ScrollReveal direction="up" delay={100}>
         <section className="case-study__section">
@@ -154,6 +165,7 @@ const TipTrack = () => {
               </p>
             </div>
 
+
             <div className="ps-card ps-card--solution">
               <h3 className="section-subtitle">The Solution</h3>
               <p className="section-text">
@@ -167,6 +179,7 @@ const TipTrack = () => {
           </div>
         </section>
       </ScrollReveal>
+
 
       {/* Design Process – Lo‑Fi & Hi‑Fi Cards */}
       <ScrollReveal direction="up" delay={100}>
@@ -203,6 +216,7 @@ const TipTrack = () => {
               />
             </div>
 
+
             {/* High‑Fidelity Mockups Card */}
             <div className="design-card">
               <h3 className="section-subtitle">High-Fidelity Mockups</h3>
@@ -231,6 +245,7 @@ const TipTrack = () => {
         </section>
       </ScrollReveal>
 
+
       {/* Key Features */}
       <ScrollReveal direction="up" delay={100}>
         <section className="case-study__section">
@@ -245,6 +260,7 @@ const TipTrack = () => {
               </p>
             </div>
 
+
             <div className="feature-card">
               <div className="feature-icon">💰</div>
               <h3 className="feature-title">Automatic Calculations</h3>
@@ -254,6 +270,7 @@ const TipTrack = () => {
               </p>
             </div>
 
+
             <div className="feature-card">
               <div className="feature-icon">📊</div>
               <h3 className="feature-title">Visual Analytics</h3>
@@ -262,6 +279,7 @@ const TipTrack = () => {
                 glance.
               </p>
             </div>
+
 
             <div className="feature-card">
               <div className="feature-icon">✅</div>
@@ -275,34 +293,28 @@ const TipTrack = () => {
         </section>
       </ScrollReveal>
 
-      {/* Impact & Results */}
+
+      {/* Key Outcomes - NEW STYLED VERSION */}
       <ScrollReveal direction="up" delay={100}>
-        <section className="case-study__section">
-          <h2 className="section-title">Impact & Results</h2>
-          <div className="impact-card">
-            <h3 className="section-subtitle">Key Outcomes</h3>
-            <ul className="impact-list">
-              <li>
-                <strong>3+ minutes → 30 seconds:</strong> Shift logging time
-                reduced by 90% with smart defaults and pre-filled fields.
-              </li>
-              <li>
-                <strong>Clear financial visibility:</strong> Bartenders can
-                instantly see real take-home pay after tip-outs, eliminating
-                guesswork.
-              </li>
-              <li>
-                <strong>Better budgeting:</strong> Weekly and monthly earnings
-                views help users identify profitable shifts and plan finances.
-              </li>
-              <li>
-                <strong>Reduced errors:</strong> Automatic calculations eliminate
-                manual math mistakes in tip-out tracking.
-              </li>
-            </ul>
-          </div>
+        <section className="case-study__section outcomes-section">
+          <h2 className="section-title">Key Outcomes</h2>
+          <ul className="outcomes-list">
+            <li>
+              <strong>3+ minutes → 30 seconds:</strong> Shift logging time reduced by 90% with smart defaults and pre-filled fields.
+            </li>
+            <li>
+              <strong>Clear financial visibility:</strong> Bartenders can instantly see real take-home pay after tip-outs, eliminating guesswork.
+            </li>
+            <li>
+              <strong>Better budgeting:</strong> Weekly and monthly earnings views help users identify profitable shifts and plan finances.
+            </li>
+            <li>
+              <strong>Reduced errors:</strong> Automatic calculations eliminate manual math mistakes in tip-out tracking.
+            </li>
+          </ul>
         </section>
       </ScrollReveal>
+
 
       {/* Download PDF */}
       <ScrollReveal direction="up" delay={100}>
@@ -325,6 +337,7 @@ const TipTrack = () => {
           </div>
         </section>
       </ScrollReveal>
+
 
       {/* Next Steps */}
       <ScrollReveal direction="up" delay={100}>
@@ -353,6 +366,7 @@ const TipTrack = () => {
         </section>
       </ScrollReveal>
 
+
       {/* Bottom Navigation */}
       <div className="case-study__bottom-nav">
         <Link to="/#projects" className="back-btn">
@@ -370,10 +384,12 @@ const TipTrack = () => {
         </button>
       </div>
 
+
       {/* Footer */}
       <Footer loading={false} toggleModal={() => {}} />
     </div>
   );
 };
+
 
 export default TipTrack;
