@@ -196,41 +196,45 @@ const EarlyDrop = () => {
       </ScrollReveal>
 
       {/* Key Features */}
-      <ScrollReveal direction="up" delay={100}>
-        <section className="case-study__section">
-          <h2 className="section-title">Key Features</h2>
-          <div className="features-grid">
-            <div className="feature-card">
-              <div className="feature-icon">🎵</div>
-              <h3 className="feature-title">Early Streaming</h3>
-              <p className="feature-description">
-                Listen to new albums before public release, giving fans exclusive first access.
-              </p>
-            </div>
-            <div className="feature-card">
-              <div className="feature-icon">🛒</div>
-              <h3 className="feature-title">One‑Tap Pre‑Order</h3>
-              <p className="feature-description">
-                Seamless ordering for vinyl, CD, and digital formats with minimal clicks.
-              </p>
-            </div>
-            <div className="feature-card">
-              <div className="feature-icon">⭐</div>
-              <h3 className="feature-title">Reward Points</h3>
-              <p className="feature-description">
-                Earn points for every purchase, redeemable for discounts and exclusive merch.
-              </p>
-            </div>
-            <div className="feature-card">
-              <div className="feature-icon">🔍</div>
-              <h3 className="feature-title">Curated Discovery</h3>
-              <p className="feature-description">
-                Personalized recommendations and featured drops help users find new artists.
-              </p>
-            </div>
-          </div>
-        </section>
-      </ScrollReveal>
+<ScrollReveal direction="up" delay={100}>
+  <section className="case-study__section">
+    <h2 className="section-title">Key Features</h2>
+    <div className="features-grid">
+      <div className="feature-card">
+        <div className="feature-icon">🎵</div>
+        <h3 className="feature-title">Early Streaming</h3>
+        <p className="feature-description">
+          Listen to new albums before public release, giving fans exclusive first access.
+        </p>
+      </div>
+
+      <div className="feature-card">
+        <div className="feature-icon">🛒</div>
+        <h3 className="feature-title">One‑Tap Pre‑Order</h3>
+        <p className="feature-description">
+          Seamless ordering for vinyl, CD, and digital formats with minimal clicks.
+        </p>
+      </div>
+
+      <div className="feature-card">
+        <div className="feature-icon">⭐</div>
+        <h3 className="feature-title">Reward Points</h3>
+        <p className="feature-description">
+          Earn points for every purchase, redeemable for discounts and exclusive merch.
+        </p>
+      </div>
+
+      <div className="feature-card">
+        <div className="feature-icon">🔍</div>
+        <h3 className="feature-title">Curated Discovery</h3>
+        <p className="feature-description">
+          Personalized recommendations and featured drops help users find new artists.
+        </p>
+      </div>
+    </div>
+  </section>
+</ScrollReveal>
+
 
       {/* Impact & Results */}
       <ScrollReveal direction="up" delay={100}>
