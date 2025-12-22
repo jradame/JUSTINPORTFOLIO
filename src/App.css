@@ -2288,4 +2288,35 @@ body:not(.dark-theme) .case-study--earlydrop .design-card span {
   }
 }
 
+/* LIGHT MODE FIXES ONLY - Don't touch dark mode */
+body:not(.dark-theme) .outcomes-list li {
+  background: rgba(239, 68, 68, 0.08);
+}
+
+body:not(.dark-theme) .outcomes-list li:hover {
+  background: rgba(239, 68, 68, 0.12);
+  box-shadow: 0 4px 16px rgba(239, 68, 68, 0.15);
+}
+
+body:not(.dark-theme) .next-steps-list li {
+  background: rgba(0, 0, 0, 0.03);
+}
+
+body:not(.dark-theme) .next-steps-list li:hover {
+  background: rgba(0, 0, 0, 0.06);
+}
+
+body:not(.dark-theme) .outcomes-section,
+body:not(.dark-theme) .next-steps-card,
+body:not(.dark-theme) .download-card {
+  background: #f9f9f9;
+}
+
+body:not(.dark-theme) .feature-card {
+  background: #f9f9f9;
+  border: 1px solid rgba(0, 0, 0, 0.08);
+}
+
+
+
 
