@@ -69,8 +69,4 @@ const Navbar = ({ loading, isDarkMode, toggleTheme, openModal, scrollToProjects 
 };
 
 export default Navbar;
-
-
-
-
-
+  

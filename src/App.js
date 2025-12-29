@@ -1,7 +1,12 @@
 import React, { useEffect, useState } from 'react';
 import { BrowserRouter as Router, Routes, Route, Link } from 'react-router-dom';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faSun, faMoon, faArrowLeft } from '@fortawesome/free-solid-svg-icons';
+import {
+  faSun,
+  faMoon,
+  faArrowLeft,
+  faArrowUpRightFromSquare,
+} from '@fortawesome/free-solid-svg-icons';
 import Skeleton from 'react-loading-skeleton';
 import 'react-loading-skeleton/dist/skeleton.css';
 import './App.css';
@@ -61,7 +66,7 @@ function App() {
     const el = document.querySelector('.projects');
     if (!el) return;
     el.scrollIntoView({ behavior: 'smooth' });
-    if (menuOpen) setMenuOpen(false);
+    setMenuOpen(false);
   };
 
   return (
@@ -73,21 +78,21 @@ function App() {
             <Link
               to="/"
               className="nav__logo-text"
-              aria-label="Go to homepage"
               onClick={() => window.scrollTo({ top: 0, behavior: 'smooth' })}
             >
               Justin Adame
             </Link>
+
             <button
               className={`hamburger ${menuOpen ? 'active' : ''}`}
               onClick={toggleMenu}
               aria-label="Toggle navigation menu"
-              aria-expanded={menuOpen}
             >
               <span className="bar"></span>
               <span className="bar"></span>
               <span className="bar"></span>
             </button>
+
             <ul className={`nav__link--list ${menuOpen ? 'open' : ''}`}>
               {loading ? (
                 <div className="nav__links-skeleton">
@@ -98,45 +103,64 @@ function App() {
                 </div>
               ) : (
                 <>
-                  <li>
+                  <li className="nav__link">
                     <button className="nav__link--anchor" onClick={() => openModal('about')}>
                       About
                     </button>
                   </li>
-                  <li>
-                    <Link
-                      to="/#projects"
-                      className="nav__link--anchor"
-                      onClick={() => {
-                        scrollToProjects();
-                      }}
-                    >
+
+                  <li className="nav__link">
+                    <button className="nav__link--anchor" onClick={scrollToProjects}>
                       Projects
-                    </Link>
+                    </button>
                   </li>
-                  <li>
+
+                  <li className="nav__link">
                     <button className="nav__link--anchor" onClick={() => openModal('contact')}>
                       Contact
                     </button>
                   </li>
-                  <li>
+
+                  {/* ✅ RESUME LINK */}
+                  <li className="nav__link">
+                    <a
+                      className="nav__link--anchor"
+                      href="/Justin_Adame_Front-End_Developer.pdf"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      onClick={closeMenu}
+                    >
+                      Resume{' '}
+                      <FontAwesomeIcon
+                        icon={faArrowUpRightFromSquare}
+                        style={{ marginLeft: '6px', fontSize: '0.85em' }}
+                      />
+                    </a>
+                  </li>
+
+                  {/* THEME TOGGLE */}
+                  <li className="nav__link">
                     <button
                       className={`theme-toggle ${isDarkMode ? 'theme-toggle--dark' : ''}`}
                       onClick={toggleTheme}
                       disabled={isTransitioning}
                       aria-label={`Switch to ${isDarkMode ? 'light' : 'dark'} mode`}
                     >
-                      <FontAwesomeIcon icon={isDarkMode ? faSun : faMoon} className="theme-toggle__icon" />
+                      <FontAwesomeIcon
+                        icon={isDarkMode ? faSun : faMoon}
+                        className="theme-toggle__icon"
+                      />
                     </button>
                   </li>
                 </>
               )}
             </ul>
           </div>
-          {menuOpen && <div className="menu-overlay" onClick={closeMenu} aria-label="Close menu" />}
+
+          {menuOpen && <div className="menu-overlay" onClick={closeMenu} />}
         </nav>
 
-        {/* ROUTER HANDLES PAGES */}
+        {/* ROUTES */}
         <Routes>
           <Route
             path="/"
@@ -145,7 +169,6 @@ function App() {
                 <Hero loading={loading} openModal={openModal} />
                 <Projects loading={loading} />
 
-                {/* Back to Top Button */}
                 <div className="back-to-top-container">
                   <button
                     onClick={() => window.scrollTo({ top: 0, behavior: 'smooth' })}
@@ -164,7 +187,7 @@ function App() {
           <Route path="/projects/earlydrop" element={<EarlyDrop />} />
         </Routes>
 
-        {/* Global Modal */}
+        {/* MODAL */}
         <Modal
           isOpen={modalOpen}
           onClose={closeModal}

@@ -1,11 +1,10 @@
 // Footer: Three-column layout with brand, links, and contact.
 import React from 'react';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faEnvelope, faHeart } from '@fortawesome/free-solid-svg-icons';
+import { faEnvelope, faHeart, faArrowUpRightFromSquare } from '@fortawesome/free-solid-svg-icons';
 import Skeleton from 'react-loading-skeleton';
 
 const Footer = ({ loading, toggleModal }) => {
-  // Get current year automatically.
   const currentYear = new Date().getFullYear();
 
   /* SCROLL */
@@ -34,25 +33,21 @@ const Footer = ({ loading, toggleModal }) => {
       <footer className="footer">
         <div className="footer__container">
           <div className="footer__content">
-            {/* Brand Skeleton */}
             <div className="footer__section footer__section--brand">
               <Skeleton width="200px" height="32px" />
               <Skeleton count={2} />
-              {/* Social icons skeleton removed */}
             </div>
 
-            {/* Links Skeleton */}
             <div className="footer__section">
               <Skeleton width="100px" height="20px" className="footer__section-title-skeleton" />
-              {[...Array(3)].map((_, index) => (
-                <Skeleton key={index} width="80px" height="16px" className="footer__link-skeleton" />
+              {[...Array(4)].map((_, index) => (
+                <Skeleton key={index} width="100px" height="16px" className="footer__link-skeleton" />
               ))}
             </div>
 
-            {/* Contact Skeleton */}
             <div className="footer__section">
               <Skeleton width="120px" height="20px" className="footer__section-title-skeleton" />
-              <Skeleton width="200px" height="16px" />
+              <Skeleton width="220px" height="16px" />
               <Skeleton width="180px" height="16px" />
             </div>
           </div>
@@ -81,9 +76,8 @@ const Footer = ({ loading, toggleModal }) => {
               Justin Adame
             </button>
             <p className="footer__description">
-              Frontend Developer passionate about creating beautiful, user-friendly web experiences with modern technologies.
+              Frontend Developer passionate about creating clean, user-friendly web experiences with modern technologies.
             </p>
-            {/* Social links div removed */}
           </div>
 
           {/* LINKS */}
@@ -117,6 +111,32 @@ const Footer = ({ loading, toggleModal }) => {
                   Contact
                 </button>
               </li>
+
+              {/* ✅ RESUME */}
+              <li>
+                <a
+                  className="footer__link"
+                  href="/Justin_Adame_Front-End_Developer.pdf"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  aria-label="Open resume PDF in a new tab"
+                >
+                  Resume <FontAwesomeIcon icon={faArrowUpRightFromSquare} style={{ marginLeft: '6px', fontSize: '0.85em' }} />
+                </a>
+              </li>
+
+              {/* Optional: LinkedIn quick link (delete if you don’t want it here) */}
+              <li>
+                <a
+                  className="footer__link"
+                  href="https://www.linkedin.com/in/justin-adame-022b6b97/"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  aria-label="Open LinkedIn profile in a new tab"
+                >
+                  LinkedIn <FontAwesomeIcon icon={faArrowUpRightFromSquare} style={{ marginLeft: '6px', fontSize: '0.85em' }} />
+                </a>
+              </li>
             </ul>
           </div>
 
@@ -130,10 +150,10 @@ const Footer = ({ loading, toggleModal }) => {
                 aria-label="Open contact modal"
               >
                 <FontAwesomeIcon icon={faEnvelope} />
-                <span>your.email@example.com</span>
+                <span>jradame@gmail.com</span>
               </button>
               <p className="footer__contact-text">
-                Let's connect and build something amazing together!
+                Let’s connect and build something great.
               </p>
             </div>
           </div>
@@ -143,8 +163,7 @@ const Footer = ({ loading, toggleModal }) => {
         <div className="footer__bottom">
           <p>
             © {currentYear} Justin Adame. Made with{' '}
-            <FontAwesomeIcon icon={faHeart} className="footer__heart" />{' '}
-          
+            <FontAwesomeIcon icon={faHeart} className="footer__heart" />
           </p>
         </div>
       </div>
@@ -153,6 +172,3 @@ const Footer = ({ loading, toggleModal }) => {
 };
 
 export default Footer;
-
-
-
