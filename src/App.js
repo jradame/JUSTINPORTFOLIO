@@ -1,16 +1,10 @@
 import React, { useEffect, useState } from 'react';
-import { BrowserRouter as Router, Routes, Route, Link } from 'react-router-dom';
+import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import {
-  faSun,
-  faMoon,
-  faArrowLeft,
-  faArrowUpRightFromSquare,
-} from '@fortawesome/free-solid-svg-icons';
-import Skeleton from 'react-loading-skeleton';
-import 'react-loading-skeleton/dist/skeleton.css';
+import { faArrowLeft } from '@fortawesome/free-solid-svg-icons';
 import './App.css';
 
+import Navbar from './components/Navbar';
 import Hero from './components/Hero';
 import Projects from './components/Projects';
 import Modal from './components/Modal';
@@ -60,7 +54,7 @@ function App() {
   };
 
   const closeMenu = () => setMenuOpen(false);
-  const toggleMenu = () => setMenuOpen(!menuOpen);
+  const toggleMenu = () => setMenuOpen((prev) => !prev);
 
   const scrollToProjects = () => {
     const el = document.querySelector('.projects');
@@ -72,93 +66,18 @@ function App() {
   return (
     <Router>
       <div className="App">
-        {/* NAVBAR */}
-        <nav className="navbar">
-          <div className="nav-container">
-            <Link
-              to="/"
-              className="nav__logo-text"
-              onClick={() => window.scrollTo({ top: 0, behavior: 'smooth' })}
-            >
-              Justin Adame
-            </Link>
-
-            <button
-              className={`hamburger ${menuOpen ? 'active' : ''}`}
-              onClick={toggleMenu}
-              aria-label="Toggle navigation menu"
-            >
-              <span className="bar"></span>
-              <span className="bar"></span>
-              <span className="bar"></span>
-            </button>
-
-            <ul className={`nav__link--list ${menuOpen ? 'open' : ''}`}>
-              {loading ? (
-                <div className="nav__links-skeleton">
-                  <Skeleton width="60px" height="20px" />
-                  <Skeleton width="70px" height="20px" />
-                  <Skeleton width="70px" height="20px" />
-                  <Skeleton circle width="44px" height="44px" />
-                </div>
-              ) : (
-                <>
-                  <li className="nav__link">
-                    <button className="nav__link--anchor" onClick={() => openModal('about')}>
-                      About
-                    </button>
-                  </li>
-
-                  <li className="nav__link">
-                    <button className="nav__link--anchor" onClick={scrollToProjects}>
-                      Projects
-                    </button>
-                  </li>
-
-                  <li className="nav__link">
-                    <button className="nav__link--anchor" onClick={() => openModal('contact')}>
-                      Contact
-                    </button>
-                  </li>
-
-                  {/* ✅ RESUME LINK */}
-                  <li className="nav__link">
-                    <a
-                      className="nav__link--anchor"
-                      href="/Justin_Adame_Front-End_Developer.pdf"
-                      target="_blank"
-                      rel="noopener noreferrer"
-                      onClick={closeMenu}
-                    >
-                      Resume{' '}
-                      <FontAwesomeIcon
-                        icon={faArrowUpRightFromSquare}
-                        style={{ marginLeft: '6px', fontSize: '0.85em' }}
-                      />
-                    </a>
-                  </li>
-
-                  {/* THEME TOGGLE */}
-                  <li className="nav__link">
-                    <button
-                      className={`theme-toggle ${isDarkMode ? 'theme-toggle--dark' : ''}`}
-                      onClick={toggleTheme}
-                      disabled={isTransitioning}
-                      aria-label={`Switch to ${isDarkMode ? 'light' : 'dark'} mode`}
-                    >
-                      <FontAwesomeIcon
-                        icon={isDarkMode ? faSun : faMoon}
-                        className="theme-toggle__icon"
-                      />
-                    </button>
-                  </li>
-                </>
-              )}
-            </ul>
-          </div>
-
-          {menuOpen && <div className="menu-overlay" onClick={closeMenu} />}
-        </nav>
+        {/* ✅ NAVBAR COMPONENT (no inline nav in App anymore) */}
+        <Navbar
+          loading={loading}
+          isDarkMode={isDarkMode}
+          toggleTheme={toggleTheme}
+          isTransitioning={isTransitioning}
+          openModal={openModal}
+          scrollToProjects={scrollToProjects}
+          menuOpen={menuOpen}
+          toggleMenu={toggleMenu}
+          closeMenu={closeMenu}
+        />
 
         {/* ROUTES */}
         <Routes>
@@ -188,12 +107,7 @@ function App() {
         </Routes>
 
         {/* MODAL */}
-        <Modal
-          isOpen={modalOpen}
-          onClose={closeModal}
-          loading={modalLoading}
-          modalType={modalType}
-        />
+        <Modal isOpen={modalOpen} onClose={closeModal} loading={modalLoading} modalType={modalType} />
       </div>
     </Router>
   );
