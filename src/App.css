@@ -2317,6 +2317,55 @@ body:not(.dark-theme) .feature-card {
   border: 1px solid rgba(0, 0, 0, 0.08);
 }
 
+/* ================================================= */
+/* Footer External Icons — Gradient Hover Match      */
+/* ================================================= */
+
+.footer__social--icons {
+  margin-top: 0.85rem;
+  display: flex;
+  justify-content: center;
+  gap: 0.9rem;
+}
+
+.footer__social--icons .footer__social-link {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 38px;
+  height: 38px;
+  border-radius: 10px;
+  background: transparent;
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  color: var(--text-muted);
+  font-size: 1.1rem;
+  opacity: 0.85;
+  transition:
+    transform 0.25s ease,
+    box-shadow 0.25s ease,
+    background 0.25s ease,
+    color 0.25s ease;
+}
+
+/* Light mode border */
+body:not(.dark-theme) .footer__social--icons .footer__social-link {
+  border: 1px solid rgba(0, 0, 0, 0.08);
+}
+
+/* Hover = brand gradient */
+.footer__social--icons .footer__social-link:hover {
+  background: linear-gradient(135deg, var(--primary), var(--accent));
+  color: #ffffff;
+  opacity: 1;
+  transform: translateY(-3px);
+  box-shadow: 0 8px 22px rgba(0, 0, 0, 0.25);
+}
+
+/* Dark mode glow tuning */
+.dark-theme .footer__social--icons .footer__social-link:hover {
+  box-shadow: 0 8px 26px rgba(110, 231, 183, 0.35);
+}
+
 
 
 
