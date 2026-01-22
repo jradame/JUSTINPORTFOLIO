@@ -19,7 +19,7 @@ const Navbar = ({
 }) => {
   const RESUME_URL = '/Justin_Adame_Front-End_Developer.pdf';
   const GITHUB_URL = 'https://github.com/jradame';
-  const LINKEDIN_URL = 'https://www.linkedin.com/in/justin-adame-022b6b97/';
+  const LINKEDIN_URL = 'https://www.linkedin.com/in/justin-adame';
 
   return (
     <nav className="navbar">
